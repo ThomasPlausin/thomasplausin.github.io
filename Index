@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas Plausin | Gaffer & Lighting Technician</title>
+    <style>
+        :root {
+            --bg-color: #0f1012;
+            --card-bg: #17191d;
+            --accent-color: #ffb703;
+            --text-color: #e2e8f0;
+            --text-muted: #94a3b8;
+            --border-color: #27272a;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 35px;
+            margin-bottom: 40px;
+            margin-top: 30px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin: 0 0 8px 0;
+            letter-spacing: -0.5px;
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px 35px;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .contact-info a {
+            color: #ffffff;
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent-color);
+            padding-bottom: 2px;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent-color);
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-top: 50px;
+            margin-bottom: 25px;
+            color: #ffffff;
+            letter-spacing: -0.3px;
+        }
+
+        .about-text {
+            font-size: 1.15rem;
+            color: #f1f5f9;
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .gallery-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 190px;
+            background-color: #20242c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .card-details {
+            padding: 18px;
+        }
+
+        .card-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+            color: #ffffff;
+        }
+
+        .card-meta {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Table Styles */
+        .table-container {
+            overflow-x: auto;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.95rem;
+            background-color: var(--card-bg);
+        }
+
+        th {
+            background-color: #1e222b;
+            color: var(--accent-color);
+            padding: 14px 16px;
+            font-weight: 600;
+            border-bottom: 2px solid var(--border-color);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover {
+            background-color: rgba(255, 255, 255, 0.015);
+        }
+
+        .badge {
+            background-color: #27272a;
+            color: #e4e4e7;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .badge.gaffer {
+            background-color: rgba(255, 183, 3, 0.15);
+            color: var(--accent-color);
+        }
+
+        /* Kit Notice Banner */
+        .kit-notice {
+            background-color: rgba(255, 183, 3, 0.1);
+            border: 1px solid rgba(255, 183, 3, 0.3);
+            color: #ffffff;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        /* Kit Section Layout */
+        .kit-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 25px;
+        }
+
+        @media (max-width: 768px) {
+            .kit-container { grid-template-columns: 1fr; }
+        }
+
+        .kit-group {
+            background: var(--card-bg);
+            padding: 22px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 20px;
+        }
+
+        .kit-group h3 {
+            margin: 0 0 15px 0;
+            font-size: 1.2rem;
+            color: #ffffff;
+            border-left: 3px solid var(--accent-color);
+            padding-left: 10px;
+        }
+
+        .kit-group ul {
+            margin: 0;
+            padding-left: 20px;
+            color: #cbd5e1;
+        }
+
+        .kit-group li {
+            margin-bottom: 8px;
+        }
+
+        .kit-group li strong {
+            color: #ffffff;
+        }
+
+        .text-small {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            display: block;
+            margin-top: 4px;
+        }
+
+        /* General Skills Cards */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        /* Personal Interests Grid */
+        .personal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .personal-card {
+            background: linear-gradient(145deg, #131518, #1c1f24);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .personal-card h4 {
+            margin: 0 0 10px 0;
+            color: var(--accent-color);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .personal-card p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #cbd5e1;
+        }
+
+        footer {
+            margin-top: 80px;
+            padding-top: 25px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            padding-bottom: 50px;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2.2rem; }
+            .contact-info { flex-direction: column; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Thomas Plausin</h1>
+        <div class="subtitle">Gaffer / Lighting Technician</div>
+        <div class="contact-info">
+            <div>📍 London Based (Willing to travel UK & Int.)</div>
+            <div>📞 <a href="tel:07538234827">07538 234 827</a></div>
+            <div>✉️ <a href="mailto:thomasplausin@live.co.uk">thomasplausin@live.co.uk</a></div>
+        </div>
+    </header>
+
+    <section id="about">
+        <p class="about-text">
+            Highly driven film lighting technician with extensive equipment knowledge backed by professional rental house industry foundations at <strong>Greenkit</strong> and <strong>ProcamTake2</strong>. Fully qualified with a City & Guilds Electrical Installation certificate and certified IPAF operator, providing complete technical understanding of large-scale power distribution, on-set safety protocols, and deployment of next-generation wireless LED fixtures. 
+        </p>
+    </section>
+
+    <h2>Featured Work & Stills</h2>
+    <section class="gallery-grid">
+        <div class="gallery-card">
+            <div class="image-placeholder">Screenshot Pending</div>
+            <div class="card-details">
+                <div class="card-title">Spinning</div>
+                <div class="card-meta">Short Film | <span class="badge gaffer">Gaffer</span></div>
+            </div>
+        </div>
+        <div class="gallery-card">
+            <div class="image-placeholder">Screenshot Pending</div>
+            <div class="card-details">
+                <div class="card-title">Gabriel Ernest</div>
+                <div class="card-meta">Short Film (16mm) | <span class="badge gaffer">Gaffer</span></div>
+            </div>
+        </div>
+        <div class="gallery-card">
+            <div class="image-placeholder">Screenshot Pending</div>
+            <div class="card-details">
+                <div class="card-title">Ferrari</div>
+                <div class="card-meta">Commercial | <span class="badge">Spark</span></div>
+            </div>
+        </div>
+    </section>
+
+    <h2>Selected Filmography</h2>
+    <section class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Project / Client</th>
+                    <th>Production Type</th>
+                    <th>Role</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Arthur & Clara</strong></td>
+                    <td>Indie Feature</td>
+                    <td><span class="badge">Spark</span></td>
+                    <td>Jan 2026</td>
+                </tr>
+                <tr>
+                    <td><strong>Spinning</strong></td>
+                    <td>Short Film</td>
+                    <td><span class="badge gaffer">Gaffer</span></td>
+                    <td>Jan 2026</td>
+                </tr>
+                <tr>
+                    <td><strong>Paris Paloma</strong></td>
+                    <td>Album Cover</td>
+                    <td><span class="badge">Spark</span></td>
+                    <td>Lighting Assist</td>
+                </tr>
+                <tr>
+                    <td><strong>Bklava Pull Up</strong></td>
+                    <td>Music Video</td>
+                    <td><span class="badge">Spark</span></td>
+                    <td>Jan 2026</td>
+                </tr>
+                <tr>
+                    <td><strong>Gabriel Ernest</strong></td>
+                    <td>Short Film</td>
+                    <td><span class="badge gaffer">Gaffer</span></td>
+                    <td>Shot on 16mm film</td>
+                </tr>
+                <tr>
+                    <td><strong>Tucker Is Gone</strong></td>
+                    <td>Short Film</td>
+                    <td><span class="badge gaffer">Gaffer</span></td>
+                    <td>Jan 2026</td>
+                </tr>
+                <tr>
+                    <td><strong>Ferrari</strong></td>
+                    <td>Commercial</td>
+                    <td><span class="badge">Spark</span></td>
+                    <td>Dec 2025</td>
+                </tr>
+                <tr>
+                    <td><strong>Paris Paloma / Erin LeCount</strong></td>
+                    <td>Music Videos</td>
+                    <td><span class="badge">Spark</span></td>
+                    <td>Dec 2025</td>
+                </tr>
+                <tr>
+                    <td><strong>See How They Grow</strong></td>
+                    <td>Short Film</td>
+                    <td><span class="badge gaffer">DoP</span></td>
+                    <td>Dec 2025</td>
+                </tr>
+                <tr>
+                    <td><strong>Ugg SS26</strong></td>
+                    <td>Commercial</td>
+                    <td><span class="badge">Spark</span></td>
+                    <td>Two Campaigns (Nov 2025)</td>
+                </tr>
+                <tr>
+                    <td><strong>Tescos</strong></td>
+                    <td>Commercial</td>
+                    <td><span class="badge">Spark</span></td>
+                    <td>Nov 2025</td>
+                </tr>
+                <tr>
+                    <td><strong>MMP</strong></td>
+                    <td>Feature Film</td>
+                    <td><span class="badge">Trainee</span></td>
+                    <td>Lighting Trainee</td>
+                </tr>
+                <tr>
+                    <td><strong>Sync Up / Animals</strong></td>
+                    <td>Short Films</td>
+                    <td><span class="badge">Spark</span></td>
+                    <td>Sep 2025</td>
+                </tr>
+                <tr>
+                    <td><strong>Pandora Nox - 'Exoscissoring'</strong></td>
+                    <td>Music Video</td>
+                    <td><span class="badge">Spark</span></td>
+                    <td>Sep 2025</td>
+                </tr>
+                <tr>
+                    <td><strong>London Fashion Week</strong></td>
+                    <td>Live Event</td>
+                    <td><span class="badge">Spark</span></td>
+                    <td>Sep 2025</td>
+                </tr>
+                <tr>
+                    <td><strong>Samsung Fold / Cosad</strong></td>
+                    <td>Commercials</td>
+                    <td><span class="badge">Spark</span></td>
+                    <td>Jul/Aug 2025</td>
+                </tr>
+                <tr>
+                    <td><strong>Brotherhood Taekwondo</strong></td>
+                    <td>Promo</td>
+                    <td><span class="badge gaffer">DoP</span></td>
+                    <td>Apr 2025</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <h2>Equipment Inventory & Vehicles</h2>
+    
+    <div class="kit-notice">
+        💡 All package pricing, stands, grip, power distribution, textiles, and transport options are available upon request.
+    </div>
+
+    <div class="kit-container">
+        <div>
+            <div class="kit-group">
+                <h3>Commercial & Drama Lighting Package</h3>
+                <ul>
+                    <li><strong>2x Nanlux Evoke 5000B</strong> Bi-Color LED Fixtures</li>
+                    <li><strong>3x Nanlux Evoke 600c</strong> Full-Color LED Fixtures</li>
+                    <li><strong>3x Nanlux Evoke 150c</strong> Full-Color LED Fixtures</li>
+                    <li><strong>1x Nanlux Evoke 5c</strong> (8-Light Kit)</li>
+                    <li><strong>1x Nanlite Pavoslim 360c</strong> LED Panel</li>
+                    <li><strong>1x ARRI Omnibar Combo Kit</strong> <span class="text-small">Includes 4x Omnibar 4 (4ft) & 4x Omnibar 2 (2ft) Modular Pixel LED fixtures.</span></li>
+                </ul>
+            </div>
+
+            <div class="kit-group">
+                <h3>Wireless DMX Network Control</h3>
+                <ul>
+                    <li><strong>iPad Console</strong> running Blackout Lighting Control software</li>
+                    <li><strong>Chauvet AN-2</strong> ArtNet/sACN Node (2-Universe outputs)</li>
+                    <li><strong>Godox Timolink TX Unit</strong> (1-Universe CRMX Wireless Transmitter)</li>
+                    <li><strong>LumenRadio Moonlite 2</strong> CRMX Transceiver</li>
+                    <li><strong>TP-Link EAP 603</strong> Wireless Access Point & 5-Port Network Switch</li>
+                </ul>
+            </div>
+        </div>
+
+        <div>
+            <div class="kit-group">
+                <h3>Logistics & Vehicle</h3>
+                <ul>
+                    <li><strong>Suzuki Swift (2012)</strong> Owner/Operator Transport</li>
+                    <li>*Main dynamic commercial package securely staged at Greenkit facilities for rapid production dispatch.</li>
+                </ul>
+            </div>
+
+            <div class="kit-group">
+                <h3>Solo Shooter / B-Kit</h3>
+                <span class="text-small" style="margin-bottom: 10px;">Retained independently for specialized videography projects:</span>
+                <ul>
+                    <li>Sony FX30 / Sony A7III</li>
+                    <li>Fujinon MK18-55 / Sony GM 24-70 / 85mm f1.8</li>
+                    <li>Rode NTG2+ & VideoMic Pro+</li>
+                    <li>Sennheiser G4 Wireless Lav Kit</li>
+                    <li>3x Amaran F1 Panels & 1x T2c Tube</li>
+                    <li>Zhiyun Molus X60 RGB</li>
+                    <li>Manfrotto Tripod & Cinesaddle</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <h2>Qualifications & Core Skills</h2>
+    <section class="skills-grid">
+        <div class="kit-group">
+            <h3>Industry Credentials</h3>
+            <ul>
+                <li>City & Guilds 2365 Electrical Installation (Level 2)</li>
+                <li>IPAF 3A & 3B Powered Access License (Boom & Scissor Lifts)</li>
+                <li>Extensive equipment QA, testing, and rental maintenance logistics</li>
+            </ul>
+        </div>
+        <div class="kit-group">
+            <h3>On-Set Technical Proficiencies</h3>
+            <ul>
+                <li>Advanced fixture rigging, structural lighting control, & light shaping</li>
+                <li>Wired/Wireless network design and multi-universe DMX architecture</li>
+                <li>Digital and 16mm analog camera workflow tracking</li>
+            </ul>
+        </div>
+    </section>
+
+    <h2>Off-Set / Interests</h2>
+    <section class="personal-grid">
+        <div class="personal-card">
+            <h4>Hobbies</h4>
+            <p>Training at the gym (7 days a week when possible), practicing Judo, playing with my cat, and regular poker nights with mates.</p>
+        </div>
+        <div class="personal-card">
+            <h4>Gaming</h4>
+            <p>Playing competitive matches of Counter-Strike 2 with friends. Longtime fan of Metal Gear Solid 3, Dragon Ball FighterZ, and Age of Empires 2.</p>
+        </div>
+        <div class="personal-card">
+            <h4>Cinema Inspirations</h4>
+            <p>Kung Fu Hustle, Lord of the Rings: The Two Towers, The Dark Knight, Bullet Train, The Fifth Element, Terminator 2, and Escape from New York.</p>
+        </div>
+        <div class="personal-card">
+            <h4>Dream Drive</h4>
+            <p>Mazda RX-7 Spirit R Type A.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Thomas Plausin. All rights reserved.</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
