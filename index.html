@@ -161,22 +161,6 @@
             font-weight: 600;
         }
 
-        .card-details {
-            padding: 18px;
-        }
-
-        .card-title {
-            font-weight: 700;
-            font-size: 1.1rem;
-            margin-bottom: 6px;
-            color: #ffffff;
-        }
-
-        .card-meta {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
-
         /* Table Styles */
         .table-container {
             overflow-x: auto;
@@ -281,283 +265,60 @@
             margin-top: 4px;
         }
 
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px,<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thomas Plausin | Gaffer & Lighting Technician</title>
-    <style>
-        :root {
-            --bg-color: #0f1012;
-            --card-bg: #17191d;
-            --accent-color: #ffb703;
-            --text-color: #e2e8f0;
-            --text-muted: #94a3b8;
-            --border-color: #27272a;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 35px;
-            margin-bottom: 40px;
-            margin-top: 30px;
-        }
-
-        h1 {
-            font-size: 2.8rem;
-            margin: 0 0 8px 0;
-            letter-spacing: -0.5px;
-            color: #ffffff;
-            font-weight: 700;
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            color: var(--accent-color);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 20px;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px 35px;
-            font-size: 0.95rem;
-            color: var(--text-muted);
-        }
-
-        .contact-info a {
-            color: #ffffff;
-            text-decoration: none;
-            border-bottom: 1px solid var(--accent-color);
-            padding-bottom: 2px;
-        }
-
-        .contact-info a:hover {
-            color: var(--accent-color);
-        }
-
-        h2 {
-            font-size: 1.6rem;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 10px;
-            margin-top: 50px;
-            margin-bottom: 25px;
-            color: #ffffff;
-            letter-spacing: -0.3px;
-        }
-
-        .about-text {
-            font-size: 1.15rem;
-            color: #f1f5f9;
-        }
-
-        /* Gallery Grid Layouts */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
-        }
-
-        .gallery-card {
-            background-color: var(--card-bg);
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid var(--border-color);
-            transition: transform 0.2s;
-        }
-
-        .gallery-card:hover {
-            transform: translateY(-2px);
-        }
-
-        /* Expanded Sub-Image Layout within Project Cards */
-        .image-container-4way {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            gap: 2px;
-            background-color: var(--border-color);
-            height: 200px;
-        }
-
-        .img-slot {
-            background-color: #20242c;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #4b5563;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            font-weight: 600;
-        }
-
-        .card-details {
-            padding: 18px;
-        }
-
-        .card-title {
-            font-weight: 700;
-            font-size: 1.1rem;
-            margin-bottom: 6px;
-            color: #ffffff;
-        }
-
-        .card-meta {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
-
-        /* Table Styles */
-        .table-container {
-            overflow-x: auto;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            text-align: left;
-            font-size: 0.95rem;
-            background-color: var(--card-bg);
-        }
-
-        th {
-            background-color: #1e222b;
-            color: var(--accent-color);
-            padding: 14px 16px;
-            font-weight: 600;
-            border-bottom: 2px solid var(--border-color);
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 0.5px;
-        }
-
-        td {
-            padding: 14px 16px;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        tr:last-child td {
-            border-bottom: none;
-        }
-
-        .badge {
-            background-color: #27272a;
-            color: #e4e4e7;
-            padding: 3px 10px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            display: inline-block;
-        }
-
-        .badge.gaffer {
-            background-color: rgba(255, 183, 3, 0.15);
-            color: var(--accent-color);
-        }
-
-        .kit-notice {
-            background-color: rgba(255, 183, 3, 0.1);
-            border: 1px solid rgba(255, 183, 3, 0.3);
-            color: #ffffff;
-            padding: 15px 20px;
-            border-radius: 8px;
-            margin-bottom: 25px;
-            font-size: 1rem;
-            font-weight: 600;
-        }
-
-        .kit-container {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 25px;
-        }
-
-        @media (max-width: 768px) {
-            .kit-container { grid-template-columns: 1fr; }
-        }
-
-        .kit-group {
-            background: var(--card-bg);
-            padding: 22px;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            margin-bottom: 20px;
-        }
-
-        .kit-group h3 {
-            margin: 0 0 15px 0;
-            font-size: 1.2rem;
-            color: #ffffff;
-            border-left: 3px solid var(--accent-color);
-            padding-left: 10px;
-        }
-
-        .kit-group ul {
-            margin: 0;
-            padding-left: 20px;
-            color: #cbd5e1;
-        }
-
-        .kit-group li {
-            margin-bottom: 8px;
-        }
-
-        .text-small {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            display: block;
-            margin-top: 4px;
-        }
-
+        /* Adjacent Side-By-Side Card Grid for Skills */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
         }
 
+        .skills-card {
+            background: var(--card-bg);
+            padding: 22px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .skills-card h3 {
+            margin: 0 0 15px 0;
+            font-size: 1.2rem;
+            color: #ffffff;
+            border-left: 3px solid var(--accent-color);
+            padding-left: 10px;
+        }
+
+        .skills-card ul {
+            margin: 0;
+            padding-left: 20px;
+            color: #cbd5e1;
+        }
+
+        .skills-card li {
+            margin-bottom: 8px;
+        }
+
+        /* Perfectly Balanced 4-Column Card Grid */
         .personal-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
             gap: 20px;
         }
 
         .personal-card {
             background: linear-gradient(145deg, #131518, #1c1f24);
             border: 1px solid var(--border-color);
-            padding: 20px;
+            padding: 22px;
             border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
 
         .personal-card h4 {
-            margin: 0 0 10px 0;
+            margin: 0 0 12px 0;
             color: var(--accent-color);
             font-size: 1rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            font-weight: 600;
         }
 
         .personal-card p {
@@ -581,6 +342,22 @@
         .book-list em {
             color: #ffffff;
             font-style: italic;
+        }
+
+        .card-details {
+            padding: 18px;
+        }
+
+        .card-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+            color: #ffffff;
+        }
+
+        .card-meta {
+            font-size: 0.9rem;
+            color: var(--text-muted);
         }
 
         footer {
@@ -617,6 +394,26 @@
         <p class="about-text">
             Highly driven film lighting technician with extensive equipment knowledge backed by professional rental house industry foundations at <strong>Greenkit</strong> and <strong>ProcamTake2</strong>. Fully qualified with a City & Guilds Electrical Installation certificate and certified IPAF operator, providing complete technical understanding of large-scale power distribution, on-set safety protocols, and deployment of next-generation wireless LED fixtures. 
         </p>
+        
+        <div class="history-block">
+            <p class="about-text" style="font-size: 1.05rem; color: #cbd5e1; margin: 0;">
+                With <strong>10 years of experience working across film and TV environments</strong>, I have spent a decade developing an intimate knowledge of modern film sets, technical protocols, and professional departmental mechanics. My path began on the floor as an extra/supporting artist, before actively progressing through hands-on technical deployments as a <strong>Camera Trainee, 2nd AC, and Grip</strong>. This comprehensive across-the-line experience gave me a deep understanding of lenses, composition, and physical movement prior to channeling my focus into the lighting department. This multi-department footprint is paired with <strong>4 years working within technical rental house infrastructure (2021–2025)</strong>, alongside serving as a specialized public-sector videographer for the <strong>NHS during the Pandemic</strong>.
+            </p>
+            <div class="history-grid">
+                <div class="history-stat">
+                    <h4>Floor Foundations</h4>
+                    <p>Camera Trainee, 2nd AC, & Grip</p>
+                </div>
+                <div class="history-stat">
+                    <h4>Industry Tenure</h4>
+                    <p>10 Years Film & TV Set Awareness</p>
+                </div>
+                <div class="history-stat">
+                    <h4>Logistics & Service</h4>
+                    <p>4 Yrs Rentals | NHS Videographer</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <h2>Featured Work & Stills (Up to 4 Shots Per Project)</h2>
@@ -653,7 +450,7 @@
                 <div class="img-slot">Shot 4</div>
             </div>
             <div class="card-details">
-                <div class="card-title">Mclaren</div>
+                <div class="card-title">Ferrari</div>
                 <div class="card-meta">Commercial | <span class="badge">Spark</span></div>
             </div>
         </div>
@@ -701,6 +498,8 @@
         <div class="gallery-card"><div class="img-slot" style="height: 160px;">BTS Photo 2</div></div>
         <div class="gallery-card"><div class="img-slot" style="height: 160px;">BTS Photo 3</div></div>
         <div class="gallery-card"><div class="img-slot" style="height: 160px;">BTS Photo 4</div></div>
+        <div class="gallery-card"><div class="img-slot" style="height: 160px;">BTS Photo 5</div></div>
+        <div class="gallery-card"><div class="img-slot" style="height: 160px;">BTS Photo 6</div></div>
     </section>
 
     <h2>Selected Filmography</h2>
@@ -721,7 +520,7 @@
                 <tr><td><strong>Bklava Pull Up</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>Jan 2026</td></tr>
                 <tr><td><strong>Gabriel Ernest</strong></td><td>Short Film</td><td><span class="badge gaffer">Gaffer</span></td><td>Shot on 16mm film</td></tr>
                 <tr><td><strong>Tucker Is Gone</strong></td><td>Short Film</td><td><span class="badge gaffer">Gaffer</span></td><td>Jan 2026</td></tr>
-                <tr><td><strong>Mclaren</strong></td><td>Commercial</td><td><span class="badge">Spark</span></td><td>Dec 2025</td></tr>
+                <tr><td><strong>Ferrari</strong></td><td>Commercial</td><td><span class="badge">Spark</span></td><td>Dec 2025</td></tr>
                 <tr><td><strong>Paris Paloma / Erin LeCount</strong></td><td>Music Videos</td><td><span class="badge">Spark</span></td><td>Dec 2025</td></tr>
                 <tr><td><strong>See How They Grow</strong></td><td>Short Film</td><td><span class="badge gaffer">DoP</span></td><td>Dec 2025</td></tr>
                 <tr><td><strong>Ugg SS26</strong></td><td>Commercial</td><td><span class="badge">Spark</span></td><td>Two Campaigns (Nov 2025)</td></tr>
@@ -745,7 +544,7 @@
     <div class="kit-container">
         <div>
             <div class="kit-group">
-                <h3>Light heads/units/kits</h3>
+                <h3>Light Heads</h3>
                 <ul>
                     <li><strong>2x Nanlux Evoke 5000B</strong> Bi-Color LED Fixtures</li>
                     <li><strong>3x Nanlux Evoke 600c</strong> Full-Color LED Fixtures</li>
@@ -796,7 +595,7 @@
 
     <h2>Qualifications & Core Skills</h2>
     <section class="skills-grid">
-        <div class="kit-group">
+        <div class="skills-card">
             <h3>Industry Credentials</h3>
             <ul>
                 <li>City & Guilds 2365 Electrical Installation (Level 2)</li>
@@ -804,7 +603,7 @@
                 <li>Extensive equipment Quality Assurance, testing, and rental maintenance logistics</li>
             </ul>
         </div>
-        <div class="kit-group">
+        <div class="skills-card">
             <h3>On-Set Technical Proficiencies</h3>
             <ul>
                 <li>Advanced fixture rigging, structural lighting control, & light shaping</li>
@@ -818,15 +617,11 @@
     <section class="personal-grid">
         <div class="personal-card">
             <h4>Hobbies</h4>
-            <p>Training at the gym (7 days a week when possible), practicing Judo, playing with my cat, home barista & coffee lover, and regular poker nights with mates.</p>
+            <p>Training at the gym (7 days a week when possible), practicing Judo, playing with my cat, regular poker nights with mates, and operating as a dedicated home barista & coffee lover.</p>
         </div>
         <div class="personal-card">
-            <h4>Gaming</h4>
-            <p>Playing competitive matches of Counter-Strike 2 with friends. Longtime fan of Metal Gear Solid 3, Dragon Ball FighterZ, and Age of Empires 2.</p>
-        </div>
-        <div class="personal-card">
-            <h4>Cinema Inspirations</h4>
-            <p>Kung Fu Hustle, Lord of the Rings: The Two Towers, The Dark Knight, Bullet Train, The Fifth Element, Terminator 2, and Escape from New York.</p>
+            <h4>Gaming & Cinema</h4>
+            <p>Competitive Counter-Strike 2 matches with friends. Longtime fan of Metal Gear Solid 3, Dragon Ball FighterZ, and Age of Empires 2. Films: Kung Fu Hustle, LOTR: The Two Towers, The Dark Knight, Bullet Train, Fifth Element, Terminator 2, Escape from NY.</p>
         </div>
         <div class="personal-card">
             <h4>Recent Reads</h4>
@@ -834,12 +629,12 @@
                 <li><em>The Iliad</em> & <em>The Odyssey</em> – Homer</li>
                 <li><em>Discourses</em> – Epictetus</li>
                 <li><em>The Republic</em> – Plato</li>
-                <li><em>TOKYOO</em> – Liam Wong (Favorite Photobook)</li>
+                <li><em>TOKYOO</em> – Liam Wong (Fav. Photobook)</li>
             </ul>
         </div>
         <div class="personal-card">
             <h4>Dreams</h4>
-            <p>Owning a Mazda RX-7 Spirit R Type A, mastering tricking / learning to backflip, and acquiring a home bean roaster + lever-operated espresso machine setup.</p>
+            <p>Owning a Mazda RX-7 Spirit R Type A, mastering acrobatic tricking / learning to cleanly backflip, and acquiring a home bean roaster paired with a lever-operated espresso machine setup.</p>
         </div>
     </section>
 
