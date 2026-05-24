@@ -97,27 +97,10 @@
             margin-bottom: 40px;
         }
 
-        .history-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .history-stat h4 {
-            margin: 0 0 5px 0;
+        /* Highlight feature class */
+        .text-highlight {
             color: var(--accent-color);
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .history-stat p {
-            margin: 0;
-            font-size: 0.95rem;
-            color: #cbd5e1;
+            font-weight: 700;
         }
 
         /* Gallery Grid Layouts */
@@ -297,25 +280,29 @@
             margin-bottom: 8px;
         }
 
-        /* Perfectly Balanced 4-Column Card Grid */
+        /* Reconfigured 5-Column Side-By-Side Row Layout for Interests */
         .personal-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+
+        @media (max-width: 900px) {
+            .personal-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
         }
 
         .personal-card {
             background: linear-gradient(145deg, #131518, #1c1f24);
             border: 1px solid var(--border-color);
-            padding: 22px;
+            padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
 
         .personal-card h4 {
-            margin: 0 0 12px 0;
+            margin: 0 0 10px 0;
             color: var(--accent-color);
-            font-size: 1rem;
+            font-size: 0.95rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             font-weight: 600;
@@ -323,8 +310,9 @@
 
         .personal-card p {
             margin: 0;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: #cbd5e1;
+            line-height: 1.5;
         }
 
         .book-list {
@@ -335,7 +323,7 @@
 
         .book-list li {
             margin-bottom: 6px;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: #cbd5e1;
         }
 
@@ -397,26 +385,12 @@
         
         <div class="history-block">
             <p class="about-text" style="font-size: 1.05rem; color: #cbd5e1; margin: 0;">
-                With <strong>10 years of experience working across film and TV environments</strong>, I have spent a decade developing an intimate knowledge of modern film sets, technical protocols, and professional departmental mechanics. My path began on the floor as an extra/supporting artist, before actively progressing through hands-on technical deployments as a <strong>Camera Trainee, 2nd AC, and Grip</strong>. This comprehensive across-the-line experience gave me a deep understanding of lenses, composition, and physical movement prior to channeling my focus into the lighting department. This multi-department footprint is paired with <strong>4 years working within technical rental house infrastructure (2021–2025)</strong>, alongside serving as a specialized public-sector videographer for the <strong>NHS during the Pandemic</strong>.
+                With <span class="text-highlight">10 years of experience working across film and TV environments</span>, I have spent a decade developing an intimate knowledge of modern film sets, technical protocols, and professional departmental mechanics. My path began on the floor as an extra/supporting artist, before actively progressing through hands-on technical deployments as a <strong>Camera Trainee, 2nd AC, and Grip</strong>. This comprehensive across-the-line experience gave me a deep understanding of lenses, composition, and physical movement prior to channeling my focus into the lighting department. This multi-department footprint is paired with <strong>4 years working within technical rental house infrastructure (2021–2025)</strong>, alongside serving as a specialized public-sector videographer for the <strong>NHS during the Pandemic (2020-2021)</strong>.
             </p>
-            <div class="history-grid">
-                <div class="history-stat">
-                    <h4>Floor Foundations</h4>
-                    <p>Camera Trainee, 2nd AC, & Grip</p>
-                </div>
-                <div class="history-stat">
-                    <h4>Industry Tenure</h4>
-                    <p>10 Years Film & TV Set Awareness</p>
-                </div>
-                <div class="history-stat">
-                    <h4>Logistics & Service</h4>
-                    <p>4 Yrs Rentals | NHS Videographer</p>
-                </div>
-            </div>
         </div>
     </section>
 
-    <h2>Featured Work & Stills (Up to 4 Shots Per Project)</h2>
+    <h2>Work</h2>
     <section class="gallery-grid">
         <div class="gallery-card">
             <div class="image-container-4way">
@@ -620,8 +594,12 @@
             <p>Training at the gym (7 days a week when possible), practicing Judo, playing with my cat, regular poker nights with mates, and operating as a dedicated home barista & coffee lover.</p>
         </div>
         <div class="personal-card">
-            <h4>Gaming & Cinema</h4>
-            <p>Competitive Counter-Strike 2 matches with friends. Longtime fan of Metal Gear Solid 3, Dragon Ball FighterZ, and Age of Empires 2. Films: Kung Fu Hustle, LOTR: The Two Towers, The Dark Knight, Bullet Train, Fifth Element, Terminator 2, Escape from NY.</p>
+            <h4>Gaming</h4>
+            <p>Playing competitive matches of Counter-Strike 2 with friends. Longtime fan of classic structural titles like Metal Gear Solid 3, Dragon Ball FighterZ, and Age of Empires 2.</p>
+        </div>
+        <div class="personal-card">
+            <h4>Cinema</h4>
+            <p>Key inspirations: Kung Fu Hustle, Lord of the Rings: The Two Towers, The Dark Knight, Bullet Train, The Fifth Element, Terminator 2, and Escape from New York.</p>
         </div>
         <div class="personal-card">
             <h4>Recent Reads</h4>
@@ -629,7 +607,7 @@
                 <li><em>The Iliad</em> & <em>The Odyssey</em> – Homer</li>
                 <li><em>Discourses</em> – Epictetus</li>
                 <li><em>The Republic</em> – Plato</li>
-                <li><em>TOKYOO</em> – Liam Wong (Fav. Photobook)</li>
+                <li><em>TOKYOO</em> – Liam Wong</li>
             </ul>
         </div>
         <div class="personal-card">
