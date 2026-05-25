@@ -187,6 +187,789 @@
             border-bottom: none;
         }
 
+        .highlight-row {
+            background-color: rgba(255, 183, 3, 0.05) !important;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .badge {
+            background-color: #27272a;
+            color: #e4e4e7;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .badge.gaffer {
+            background-color: rgba(255, 183, 3, 0.15);
+            color: var(--accent-color);
+        }
+
+        .badge.bestboy {
+            background-color: rgba(251, 146, 60, 0.15);
+            color: #fb923c;
+        }
+
+        .badge.mmp-tag {
+            background-color: rgba(255, 183, 3, 0.25);
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .kit-notice {
+            background-color: rgba(255, 183, 3, 0.1);
+            border: 1px solid rgba(255, 183, 3, 0.3);
+            color: #ffffff;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .accordion-btn {
+            background-color: var(--card-bg);
+            color: #ffffff;
+            cursor: pointer;
+            padding: 18px 22px;
+            width: 100%;
+            border: 1px solid var(--border-color);
+            text-align: left;
+            outline: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.2s, border-color 0.2s;
+            margin-bottom: 10px;
+        }
+
+        .accordion-btn:hover {
+            background-color: #1e222b;
+            border-color: var(--accent-color);
+        }
+
+        .accordion-btn::after {
+            content: '\25BC';
+            font-size: 0.8rem;
+            color: var(--accent-color);
+            transition: transform 0.2s;
+        }
+
+        .accordion-btn.active::after {
+            transform: rotate(180deg);
+        }
+
+        .accordion-panel {
+            padding: 0 22px;
+            background-color: #121418;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            border-radius: 0 0 8px 8px;
+            border: 1px solid transparent;
+            margin-bottom: 25px;
+        }
+
+        .accordion-panel.open {
+            border-color: var(--border-color);
+            border-top: none;
+            padding: 22px;
+        }
+
+        .kit-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 25px;
+        }
+
+        @media (max-width: 768px) {
+            .kit-container { grid-template-columns: 1fr; }
+        }
+
+        .kit-group {
+            background: var(--card-bg);
+            padding: 22px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 20px;
+        }
+
+        .kit-group h3 {
+            margin: 0 0 15px 0;
+            font-size: 1.2rem;
+            color: #ffffff;
+            border-left: 3px solid var(--accent-color);
+            padding-left: 10px;
+        }
+
+        .kit-group ul {
+            margin: 0;
+            padding-left: 20px;
+            color: #cbd5e1;
+        }
+
+        .kit-group li {
+            margin-bottom: 8px;
+        }
+
+        .text-small {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            display: block;
+            margin-top: 4px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .skills-card {
+            background: var(--card-bg);
+            padding: 22px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .skills-card h3 {
+            margin: 0 0 15px 0;
+            font-size: 1.2rem;
+            color: #ffffff;
+            border-left: 3px solid var(--accent-color);
+            padding-left: 10px;
+        }
+
+        .skills-card ul {
+            margin: 0;
+            padding-left: 20px;
+            color: #cbd5e1;
+        }
+
+        .skills-card li {
+            margin-bottom: 8px;
+        }
+
+        .personal-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+
+        @media (max-width: 900px) {
+            .personal-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+        }
+
+        .personal-card {
+            background: linear-gradient(145deg, #131518, #1c1f24);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .personal-card h4 {
+            margin: 0 0 10px 0;
+            color: var(--accent-color);
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+        }
+
+        .personal-card p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #cbd5e1;
+            line-height: 1.5;
+        }
+
+        .book-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .book-list li {
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+            color: #cbd5e1;
+        }
+
+        .book-list em {
+            color: #ffffff;
+            font-style: italic;
+        }
+
+        .card-details {
+            padding: 18px;
+        }
+
+        .card-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+            color: #ffffff;
+        }
+
+        .card-meta {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        footer {
+            margin-top: 80px;
+            padding-top: 25px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            padding-bottom: 50px;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2.2rem; }
+            .contact-info { flex-direction: column; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Thomas Plausin</h1>
+        <div class="subtitle">Gaffer / Lighting Technician</div>
+        <div class="contact-info">
+            <div>📍 London Based (Willing to travel UK & Int.)</div>
+            <div>📞 <a href="tel:07538234827">07538 234 827</a></div>
+            <div>✉️ <a href="mailto:thomasplausin@live.co.uk">thomasplausin@live.co.uk</a></div>
+            <div>📸 <a href="https://instagram.com/thomasplausin.sparks" target="_blank">Instagram</a></div>
+        </div>
+
+        <div class="cert-badges-row">
+            <span class="top-cert-badge">⚡ City &amp; Guilds 2365 Level 2 Electrical Installation Certified</span>
+            <span class="top-cert-badge">🏗️ Certified IPAF Operator (3A &amp; 3B)</span>
+        </div>
+    </header>
+
+    <section id="top-overview">
+        <p class="about-text" style="font-size: 1.25rem; font-weight: 400; line-height: 1.6; color: #ffffff;">
+            <span class="text-highlight">London</span>-based <span class="text-highlight">lighting technician</span>. Starting my career in the industry <span class="text-highlight">10 years ago</span> as cast, understanding set etiquette and the rhythm of the day on productions of all scales, including HETV, features, and commercials. I combine a rigorous City & Guilds 2365 <span class="text-highlight">Level 2 Electrical</span> Installation qualification and specialized <span class="text-highlight">IPAF 3A & 3B</span> scissor/boom lift machine certifications with advanced industry field experience. My technical expertise is backed by <span class="text-highlight">4+ years rentals</span> house operations at Greenkit and ProcamTake2, including <span class="text-highlight">DMX / CRMX</span> wireless network architecture, and console/desk operations.
+        </p>
+    </section>
+
+    <h2>Work (Featured Projects)</h2>
+    <section class="gallery-grid">
+        <div class="gallery-card">
+            <div class="image-container-4way">
+                <div class="img-slot">Shot 1</div>
+                <div class="img-slot">Shot 2</div>
+                <div class="img-slot">Shot 3</div>
+                <div class="img-slot">Shot 4</div>
+            </div>
+            <div class="card-details">
+                <div class="card-title">Spinning</div>
+                <div class="card-meta">Short Film | <span class="badge gaffer">Gaffer</span></div>
+            </div>
+        </div>
+        <div class="gallery-card">
+            <div class="image-container-4way">
+                <div class="img-slot">Shot 1</div>
+                <div class="img-slot">Shot 2</div>
+                <div class="img-slot">Shot 3</div>
+                <div class="img-slot">Shot 4</div>
+            </div>
+            <div class="card-details">
+                <div class="card-title">Gabriel Ernest</div>
+                <div class="card-meta">Short Film (16mm) | <span class="badge gaffer">Gaffer</span></div>
+            </div>
+        </div>
+        <div class="gallery-card">
+            <div class="image-container-4way">
+                <div class="img-slot">Shot 1</div>
+                <div class="img-slot">Shot 2</div>
+                <div class="img-slot">Shot 3</div>
+                <div class="img-slot">Shot 4</div>
+            </div>
+            <div class="card-details">
+                <div class="card-title">McLaren Special Operations</div>
+                <div class="card-meta">Social Media Campaign | <span class="badge">Spark</span></div>
+            </div>
+        </div>
+        <div class="gallery-card">
+            <div class="image-container-4way">
+                <div class="img-slot">Shot 1</div>
+                <div class="img-slot">Shot 2</div>
+                <div class="img-slot">Shot 3</div>
+                <div class="img-slot">Shot 4</div>
+            </div>
+            <div class="card-details">
+                <div class="card-title">Lili Curia</div>
+                <div class="card-meta">Fashion Campaign | <span class="badge gaffer">Gaffer</span></div>
+            </div>
+        </div>
+        <div class="gallery-card">
+            <div class="image-container-4way">
+                <div class="img-slot">Shot 1</div>
+                <div class="img-slot">Shot 2</div>
+                <div class="img-slot">Shot 3</div>
+                <div class="img-slot">Shot 4</div>
+            </div>
+            <div class="card-details">
+                <div class="card-title">Tucker Is Gone</div>
+                <div class="card-meta">Short Film | <span class="badge gaffer">Gaffer</span></div>
+            </div>
+        </div>
+        <div class="gallery-card">
+            <div class="image-container-4way">
+                <div class="img-slot">Shot 1</div>
+                <div class="img-slot">Shot 2</div>
+                <div class="img-slot">Shot 3</div>
+                <div class="img-slot">Shot 4</div>
+            </div>
+            <div class="card-details">
+                <div class="card-title">See How They Grow</div>
+                <div class="card-meta">Short Film | <span class="badge gaffer">DoP</span></div>
+            </div>
+        </div>
+    </section>
+
+    <h2>Behind The Scenes (BTS) on Set</h2>
+    <section class="gallery-grid">
+        <div class="gallery-card">
+            <img src="bts1.jpeg" alt="BTS 1" style="width:100%; height:160px; object-fit:cover; display:block;">
+        </div>
+        <div class="gallery-card">
+            <img src="bts2.jpg" alt="BTS 2" style="width:100%; height:160px; object-fit:cover; display:block;">
+        </div>
+        <div class="gallery-card">
+            <img src="bts3.jpg" alt="BTS 3" style="width:100%; height:160px; object-fit:cover; display:block;">
+        </div>
+        <div class="gallery-card">
+            <img src="bts4.jpeg" alt="BTS 4" style="width:100%; height:160px; object-fit:cover; display:block;">
+        </div>
+        <div class="gallery-card">
+            <img src="bts5.jpeg" alt="BTS 5" style="width:100%; height:160px; object-fit:cover; display:block;">
+        </div>
+        <div class="gallery-card">
+            <img src="bts6.JPG" alt="BTS 6" style="width:100%; height:160px; object-fit:cover; display:block;">
+        </div>
+        <div class="gallery-card">
+            <img src="bts7.jpeg" alt="BTS 7" style="width:100%; height:160px; object-fit:cover; display:block;">
+        </div>
+    </section>
+
+    <h2>Professional Journey</h2>
+    <section id="narrative-history">
+        <div class="history-block">
+            <p class="about-text" style="font-size: 1.05rem; color: #cbd5e1; margin: 0; line-height: 1.7;">
+                With <span class="text-highlight">10 years of experience working across film and TV environments</span>, I have spent a decade developing an intimate knowledge of modern film sets, technical protocols, and professional departmental mechanics. My path began on the floor as an extra/supporting artist, before actively progressing through hands-on technical deployments as a <strong>Camera Trainee, 2nd AC, and Grip</strong>. This comprehensive across-the-line experience gave me a deep understanding of lenses, composition, and physical movement prior to channeling my focus into the lighting department. This multi-department footprint is paired with <strong>4 years working within technical rental house infrastructure (2021–2025)</strong>, alongside serving as a specialized public-sector videographer for the <strong>NHS during the Pandemic (2020-2021)</strong>.
+            </p>
+        </div>
+    </section>
+
+    <h2>Selected Filmography</h2>
+    <section class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Project / Client</th>
+                    <th>Production Type</th>
+                    <th>Role</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>'SkyshipTV' Pre Light</strong></td><td>Pre Light</td><td><span class="badge gaffer">Gaffer</span></td><td>May 2026</td></tr>
+                <tr><td><strong>'Cawston Press' Drink</strong></td><td>Commercial</td><td><span class="badge">Spark</span></td><td>May 2026</td></tr>
+                <tr><td><strong>'TT Socks'</strong></td><td>Commercial</td><td><span class="badge gaffer">Gaffer</span></td><td>May 2026</td></tr>
+                <tr><td><strong>'Surprise Surprise'</strong></td><td>Production</td><td><span class="badge">Spark</span></td><td>May 2026</td></tr>
+                <tr><td><strong>'The Oath'</strong></td><td>Short Film</td><td><span class="badge">Spark</span></td><td>Apr 2026</td></tr>
+                <tr><td><strong>'Shadow Diva'</strong></td><td>Vertical Drama</td><td><span class="badge">Spark</span></td><td>Apr 2026</td></tr>
+                <tr><td><strong>'Trust'</strong></td><td>Short Film</td><td><span class="badge">Spark</span></td><td>Apr 2026</td></tr>
+                <tr><td><strong>'Post'</strong></td><td>Short Film</td><td><span class="badge">Spark</span></td><td>Apr 2026</td></tr>
+                <tr><td><strong>'Courez'</strong></td><td>Fashion Campaign</td><td><span class="badge">Spark</span></td><td>Apr 2026</td></tr>
+                <tr><td><strong>'All Stars x Bien Vu'</strong></td><td>Football Campaign</td><td><span class="badge">Spark</span></td><td>Apr 2026</td></tr>
+                <tr><td><strong>'VC'</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>Mar 2026</td></tr>
+                <tr><td><strong>'Take You There' Mae Muller</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>Mar 2026</td></tr>
+                <tr><td><strong>'Blackout'</strong></td><td>Indie Feature</td><td><span class="badge">Spark</span></td><td>Mar 2026</td></tr>
+                <tr><td><strong>'Shadow of an Aristocrat'</strong></td><td>Vertical Drama</td><td><span class="badge">Spark</span></td><td>Mar 2026</td></tr>
+                <tr><td><strong>Lili Curia</strong></td><td>Fashion Campaign</td><td><span class="badge gaffer">Gaffer</span></td><td>Mar 2026</td></tr>
+                <tr><td><strong>McLaren Special Operations</strong></td><td>Social Media Campaign</td><td><span class="badge">Spark</span></td><td>Feb 2026</td></tr>
+                <tr><td><strong>'DM'</strong></td><td>Short Film</td><td><span class="badge gaffer">Gaffer</span></td><td>Feb 2026</td></tr>
+                <tr><td><strong>'Nosedive' Man/Woman/Chainsaw</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>Feb 2026</td></tr>
+                <tr><td><strong>'Heart to Heartbreak' Rosa Walton</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>Feb 2026</td></tr>
+                <tr><td><strong>'Sorry Anyway' Rosa Walton</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>Feb 2026</td></tr>
+                <tr><td><strong>'Timeswiper'</strong></td><td>Short Film</td><td><span class="badge">Spark</span></td><td>Feb 2026</td></tr>
+                <tr><td><strong>'Arthur &amp; Clara'</strong></td><td>Indie Feature Film</td><td><span class="badge bestboy">Best Boy</span></td><td>Jan 2026</td></tr>
+                <tr><td><strong>'Spinning'</strong></td><td>Short Film</td><td><span class="badge gaffer">Gaffer</span></td><td>Jan 2026</td></tr>
+                <tr><td><strong>Paris Paloma Album Cover</strong></td><td>Photo Shoot</td><td><span class="badge">Lighting Assist / Spark</span></td><td>Jan 2026</td></tr>
+                <tr><td><strong>'Bklava Pull Up'</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>Jan 2026</td></tr>
+                <tr><td><strong>'Gabriel Ernest'</strong></td><td>Short Film</td><td><span class="badge gaffer">Gaffer</span></td><td>Shot on 16mm film</td></tr>
+                <tr><td><strong>'Tucker Is Gone'</strong></td><td>Short Film</td><td><span class="badge gaffer">Gaffer</span></td><td>Jan 2026</td></tr>
+                
+                <tr><td><strong>Ferrari</strong></td><td>Commercial</td><td><span class="badge">Spark</span></td><td>Dec 2025</td></tr>
+                <tr><td><strong>Erin LeCount</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>Dec 2025</td></tr>
+                <tr><td><strong>Paris Paloma</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>Dec 2025</td></tr>
+                <tr><td><strong>'See How They Grow'</strong></td><td>Short Film</td><td><span class="badge gaffer">DoP</span></td><td>December 2025</td></tr>
+                <tr><td><strong>Ugg SS26 (Campaign 1)</strong></td><td>Commercial</td><td><span class="badge">Spark</span></td><td>Nov 2025</td></tr>
+                <tr><td><strong>Ugg SS26 (Campaign 2)</strong></td><td>Commercial</td><td><span class="badge">Spark</span></td><td>Nov 2025</td></tr>
+                <tr><td><strong>Tescos</strong></td><td>Commercial</td><td><span class="badge">Spark</span></td><td>Nov 2025</td></tr>
+                
+                <tr class="highlight-row"><td>🎬 <strong>'This Is How It Goes'</strong></td><td>Major Motion Picture</td><td><span class="badge mmp-tag">Lighting Trainee</span></td><td><strong>October - November 2025</strong></td></tr>
+                
+                <tr><td><strong>'Sync Up'</strong></td><td>Short Film</td><td><span class="badge">Spark</span></td><td>Sep 2025</td></tr>
+                <tr><td><strong>'Animals'</strong></td><td>Short Film</td><td><span class="badge">Spark</span></td><td>Sep 2025</td></tr>
+                <tr><td><strong>Pandora Nox - 'Exoscissoring'</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>Sep 2025</td></tr>
+                <tr><td><strong>London Fashion Week</strong></td><td>Live Event</td><td><span class="badge">Spark</span></td><td>Sep 2025</td></tr>
+                <tr><td><strong>Cosad Womens Outerwear</strong></td><td>Commercial</td><td><span class="badge">Spark</span></td><td>Aug 2025</td></tr>
+                <tr><td><strong>Samsung Fold</strong></td><td>Commercial</td><td><span class="badge">Spark</span></td><td>Jul 2025</td></tr>
+                <tr><td><strong>Brotherhood Taekwondo</strong></td><td>Promo</td><td><span class="badge gaffer">DoP</span></td><td>April 2025</td></tr>
+                
+                <tr><td><strong>Jovial</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>October 2024</td></tr>
+                <tr><td><strong>Jamie Hance Self Tape</strong></td><td>Actor/Musician Clip</td><td><span class="badge gaffer">Gaffer</span></td><td>August 2024</td></tr>
+                <tr><td><strong>Homelessness Short Film</strong></td><td>Short Film</td><td><span class="badge">Spark</span></td><td>April 2024</td></tr>
+                <tr><td><strong>Simply Be AW23</strong></td><td>Fashion Shoot</td><td><span class="badge">Spark</span></td><td>Aug 2023</td></tr>
+                <tr><td><strong>Short Film</strong></td><td>Pilot Scene</td><td><span class="badge">Spark</span></td><td>Aug 2023</td></tr>
+                <tr><td><strong>Wolt</strong></td><td>Commercial</td><td><span class="badge">Spark</span></td><td>July 2023</td></tr>
+                <tr><td><strong>Insights</strong></td><td>Podcast</td><td><span class="badge">Spark</span></td><td>July 2023</td></tr>
+                <tr><td><strong>Killer in the House</strong></td><td>Short Film</td><td><span class="badge">2nd AC / Spark</span></td><td>July 2023</td></tr>
+                <tr><td><strong>BugBoy</strong></td><td>Short Film</td><td><span class="badge">2nd AC / Grip / Spark</span></td><td>Oct 2022</td></tr>
+                <tr><td><strong>Strike: Lethal White</strong></td><td>TV Series</td><td><span class="badge">Trainee</span></td><td>Camera Trainee (Nov 2019)</td></tr>
+                <tr><td><strong>Forgiving Earth</strong></td><td>Netflix Production</td><td><span class="badge">Trainee</span></td><td>Camera Trainee (Placement) (July 2017)</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <h2>Equipment Inventory &amp; Logistics</h2>
+
+    <div class="kit-notice">
+        💡 Light heads available, contact for full kit list. All package pricing, stands, grip, power distribution, textiles, and transport options are available upon request.
+    </div>
+
+    <button class="accordion-btn" onclick="toggleAccordion()">📦 View Complete Equipment Inventory (Light Heads &amp; B-Kit)</button>
+    
+    <div id="gearPanel" class="accordion-panel">
+        <div class="kit-container">
+            <div>
+                <div class="kit-group">
+                    <h3>Light Heads</h3>
+                    <ul>
+                        <li><strong>2x Nanlux Evoke 5000B</strong> Bi-Color LED Fixtures</li>
+                        <li><strong>3x Nanlux Evoke 600c</strong> Full-Color LED Fixtures</li>
+                        <li><strong>3x Nanlux Evoke 150c</strong> Full-Color LED Fixtures</li>
+                        <li><strong>1x Nanlux Evoke 5c</strong> (8-Light Kit)</li>
+                        <li><strong>1x Nanlite Pavoslim 360c</strong> LED Panel</li>
+                        <li><strong>1x ARRI Omnibar Combo Kit</strong> <span class="text-small">Includes 4x Omnibar 4 (4ft) &amp; 4x Omnibar 2 (2ft) Modular Pixel LED fixtures.</span></li>
+                    </ul>
+                </div>
+
+                <div class="kit-group">
+                    <h3>Wireless DMX Control &amp; Analysis</h3>
+                    <ul>
+                        <li><strong>Lit Systems Duo 1</strong> Spectrum, Color &amp; Exposure Meter</li>
+                        <li><strong>iPad Console</strong> running Blackout Lighting Control software</li>
+                        <li><strong>Chauvet AN-2</strong> ArtNet/sACN Node (2-Universe outputs)</li>
+                        <li><strong>Godox Timolink TX Unit</strong> (1-Universe CRMX Wireless Transmitter)</li>
+                        <li><strong>LumenRadio Moonlite 2</strong> CRMX Transceiver</li>
+                        <li><strong>TP-Link EAP 603</strong> Wireless Access Point &amp; 5-Port Network Switch</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <div class="kit-group">
+                    <h3>Solo Shooter / B-Kit</h3>
+                    <span class="text-small" style="margin-bottom: 10px;">Retained independently for specialized videography projects:</span>
+                    <ul>
+                        <li>Sony FX30 / Sony A7III</li>
+                        <li>Fujinon MK18-55 / Sony GM 24-70 / 85mm f1.8</li>
+                        <li>Rode NTG2+ &amp; VideoMic Pro+</li>
+                        <li>Sennheiser G4 Wireless Lav Kit</li>
+                        <li>3x Amaran F1 Panels &amp; 1x T2c Tube</li>
+                        <li>Zhiyun Molus X60 RGB</li>
+                        <li>Manfrotto Tripod &amp; Cinesaddle</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="kit-group" style="margin-top: 15px;">
+        <h3>Logistics &amp; Vehicle</h3>
+        <ul>
+            <li><strong>Suzuki Swift (2012)</strong> Owner/Operator Transport <span class="text-small">Full UK Licence. Perfect for smaller footprint setups. I am also fully prepared, certified, and happy to rent and drive commercial production vans for larger productions.</span></li>
+            <li>*All main equipment packages securely housed with Greenkit facilities for rapid production dispatch.</li>
+        </ul>
+    </div>
+
+    <h2>Qualifications &amp; Core Skills</h2>
+    <section class="skills-grid">
+        <div class="skills-card">
+            <h3>Industry Credentials</h3>
+            <ul>
+                <li>City &amp; Guilds 2365 Electrical Installation (Level 2)</li>
+                <li>IPAF 3A &amp; 3B Powered Access License (Boom &amp; Scissor Lifts)</li>
+                <li>Extensive equipment Quality Assurance, testing, and rental maintenance logistics</li>
+            </ul>
+        </div>
+        <div class="skills-card">
+            <h3>On-Set Technical Proficiencies</h3>
+            <ul>
+                <li>Advanced fixture rigging, structural lighting control, &amp; light shaping</li>
+                <li>Wired/Wireless network design and multi-universe DMX architecture</li>
+                <li>Calibration of fixture color matrices to match camera sensor profiles across varied color spaces</li>
+            </ul>
+        </div>
+    </section>
+
+    <h2>Off-Set / Interests</h2>
+    <section class="personal-grid">
+        <div class="personal-card">
+            <h4>Hobbies</h4>
+            <p>Training at the gym (7 days a week when possible), practicing Judo, playing with my cat, regular poker nights with mates, and operating as a dedicated home barista &amp; coffee lover.</p>
+        </div>
+        <div class="personal-card">
+            <h4>Gaming</h4>
+            <p>Playing competitive matches of Counter-Strike 2 with friends. Longtime fan of classic structural titles like Metal Gear Solid 3, Dragon Ball FighterZ, and Age of Empires 2.</p>
+        </div>
+        <div class="personal-card">
+            <h4>Cinema</h4>
+            <p>Key inspirations: Kung Fu Hustle, Lord of the Rings: The Two Towers, The Dark Knight, Bullet Train, The Fifth Element, Terminator 2, and Escape from New York.</p>
+        </div>
+        <div class="personal-card">
+            <h4>Recent Reads</h4>
+            <ul class="book-list">
+                <li><em>The Iliad</em> &amp; <em>The Odyssey</em> – Homer</li>
+                <li><em>Discourses</em> – Epictetus</li>
+                <li><em>The Republic</em> – Plato</li>
+                <li><em>TOKYOO</em> – Liam Wong</li>
+            </ul>
+        </div>
+        <div class="personal-card">
+            <h4>Dreams</h4>
+            <p>Owning a Mazda RX-7 Spirit R Type A, mastering acrobatic tricking / learning to cleanly backflip, and acquiring a home bean roaster paired with a lever-operated espresso machine setup.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Thomas Plausin. All rights reserved.</p>
+    </footer>
+
+</div>
+
+<script>
+    function toggleAccordion() {
+        var btn = document.querySelector(".accordion-btn");
+        var panel = document.getElementById("gearPanel");
+        
+        btn.classList.toggle("active");
+        panel.classList.toggle("open");
+        
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+    }
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas Plausin | Gaffer & Lighting Technician</title>
+    <style>
+        :root {
+            --bg-color: #0f1012;
+            --card-bg: #17191d;
+            --accent-color: #ffb703;
+            --text-color: #e2e8f0;
+            --text-muted: #94a3b8;
+            --border-color: #27272a;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 30px;
+            margin-bottom: 35px;
+            margin-top: 30px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin: 0 0 8px 0;
+            letter-spacing: -0.5px;
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px 35px;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 25px;
+        }
+
+        .contact-info a {
+            color: #ffffff;
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent-color);
+            padding-bottom: 2px;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent-color);
+        }
+
+        .cert-badges-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 5px;
+        }
+
+        .top-cert-badge {
+            background-color: rgba(255, 183, 3, 0.08);
+            border: 1px solid rgba(255, 183, 3, 0.25);
+            color: #ffffff;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-top: 50px;
+            margin-bottom: 25px;
+            color: #ffffff;
+            letter-spacing: -0.3px;
+        }
+
+        .about-text {
+            font-size: 1.15rem;
+            color: #f1f5f9;
+            margin-bottom: 20px;
+        }
+
+        .text-highlight {
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .gallery-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .image-container-4way {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 2px;
+            background-color: var(--border-color);
+            height: 200px;
+        }
+
+        .img-slot {
+            background-color: #20242c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #4b5563;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.95rem;
+            background-color: var(--card-bg);
+        }
+
+        th {
+            background-color: #1e222b;
+            color: var(--accent-color);
+            padding: 14px 16px;
+            font-weight: 600;
+            border-bottom: 2px solid var(--border-color);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
         .badge {
             background-color: #27272a;
             color: #e4e4e7;
