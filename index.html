@@ -73,7 +73,6 @@
             color: var(--accent-color);
         }
 
-        /* Top Certification Badges Style */
         .cert-badges-row {
             display: flex;
             flex-wrap: wrap;
@@ -110,21 +109,11 @@
             margin-bottom: 20px;
         }
 
-        /* History / About Block Layout */
-        .history-block {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 40px;
-        }
-
         .text-highlight {
             color: var(--accent-color);
             font-weight: 700;
         }
 
-        /* Gallery Grid Layouts */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -164,7 +153,6 @@
             font-weight: 600;
         }
 
-        /* Table Styles */
         .table-container {
             overflow-x: auto;
             border-radius: 8px;
@@ -223,6 +211,59 @@
             margin-bottom: 25px;
             font-size: 1rem;
             font-weight: 600;
+        }
+
+        /* Dropdown/Accordion Box Styles */
+        .accordion-btn {
+            background-color: var(--card-bg);
+            color: #ffffff;
+            cursor: pointer;
+            padding: 18px 22px;
+            width: 100%;
+            border: 1px solid var(--border-color);
+            text-align: left;
+            outline: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.2s, border-color 0.2s;
+            margin-bottom: 10px;
+        }
+
+        .accordion-btn:hover {
+            background-color: #1e222b;
+            border-color: var(--accent-color);
+        }
+
+        .accordion-btn::after {
+            content: '\25BC';
+            font-size: 0.8rem;
+            color: var(--accent-color);
+            transition: transform 0.2s;
+        }
+
+        .accordion-btn.active::after {
+            transform: rotate(180deg);
+        }
+
+        .accordion-panel {
+            padding: 0 22px;
+            background-color: #121418;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            border-radius: 0 0 8px 8px;
+            border: 1px solid transparent;
+            margin-bottom: 25px;
+        }
+
+        .accordion-panel.open {
+            border-color: var(--border-color);
+            border-top: none;
+            padding: 22px;
         }
 
         .kit-container {
@@ -404,7 +445,7 @@
 
     <section id="top-overview">
         <p class="about-text" style="font-size: 1.25rem; font-weight: 400; line-height: 1.6; color: #ffffff;">
-            <span class="text-highlight">London</span>-based <span class="text-highlight">lighting technician</span>. First entering the industry <span class="text-highlight">10 years ago</span> as cast, I gained an intuitive grasp of set etiquette and baseline mechanics across productions of all scales, including HETV, features, and commercials. Today, I combine a rigorous <span class="text-highlight">City & Guilds 2365 Level 2 Electrical Installation qualification</span> and specialized <span class="text-highlight">IPAF 3A & 3B scissor/boom lift machine certifications</span> with advanced industry field experience. My technical infrastructure expertise is backed by <span class="text-highlight">4+ years in rental house operations</span> at Greenkit and ProcamTake2, translating into precision on-set deployment across complex network systems, including <span class="text-highlight">DMX / CRMX distribution, wireless network architecture, and console/desk operations</span>.
+            <span class="text-highlight">London</span>-based <span class="text-highlight">lighting technician</span>. Starting my career in the industry <span class="text-highlight">10 years ago</span> as cast, understanding set etiquette and the rhythm of the day on productions of all scales, including HETV, features, and commercials. I combine a rigorous City & Guilds 2365 <span class="text-highlight">Level 2 Electrical</span> Installation qualification and specialized <span class="text-highlight">IPAF 3A & 3B</span> scissor/boom lift machine certifications with advanced industry field experience. My technical expertise is backed by <span class="text-highlight">4+ years rentals</span> house operations at Greenkit and ProcamTake2, including <span class="text-highlight">DMX / CRMX</span> wireless network architecture, and console/desk operations.
         </p>
     </section>
 
@@ -551,78 +592,82 @@
         </table>
     </section>
 
-    <h2>Equipment Inventory & Vehicles</h2>
+    <h2>Equipment Inventory & Logistics</h2>
 
     <div class="kit-notice">
-        💡 All package pricing, stands, grip, power distribution, textiles, and transport options are available upon request.
+        💡 Light heads available, contact for full kit list. All package pricing, stands, grip, power distribution, textiles, and transport options are available upon request.
     </div>
 
-    <div class="kit-container">
-        <div>
-            <div class="kit-group">
-                <h3>Light Heads</h3>
-                <ul>
-                    <li><strong>2x Nanlux Evoke 5000B</strong> Bi-Color LED Fixtures</li>
-                    <li><strong>3x Nanlux Evoke 600c</strong> Full-Color LED Fixtures</li>
-                    <li><strong>3x Nanlux Evoke 150c</strong> Full-Color LED Fixtures</li>
-                    <li><strong>1x Nanlux Evoke 5c</strong> (8-Light Kit)</li>
-                    <li><strong>1x Nanlite Pavoslim 360c</strong> LED Panel</li>
-                    <li><strong>1x ARRI Omnibar Combo Kit</strong> <span class="text-small">Includes 4x Omnibar 4 (4ft) & 4x Omnibar 2 (2ft) Modular Pixel LED fixtures.</span></li>
-                </ul>
+    <button class="accordion-btn" onclick="toggleAccordion()">📦 View Complete Equipment Inventory (Light Heads &amp; B-Kit)</button>
+    
+    <div id="gearPanel" class="accordion-panel">
+        <div class="kit-container">
+            <div>
+                <div class="kit-group">
+                    <h3>Light Heads</h3>
+                    <ul>
+                        <li><strong>2x Nanlux Evoke 5000B</strong> Bi-Color LED Fixtures</li>
+                        <li><strong>3x Nanlux Evoke 600c</strong> Full-Color LED Fixtures</li>
+                        <li><strong>3x Nanlux Evoke 150c</strong> Full-Color LED Fixtures</li>
+                        <li><strong>1x Nanlux Evoke 5c</strong> (8-Light Kit)</li>
+                        <li><strong>1x Nanlite Pavoslim 360c</strong> LED Panel</li>
+                        <li><strong>1x ARRI Omnibar Combo Kit</strong> <span class="text-small">Includes 4x Omnibar 4 (4ft) & 4x Omnibar 2 (2ft) Modular Pixel LED fixtures.</span></li>
+                    </ul>
+                </div>
+
+                <div class="kit-group">
+                    <h3>Wireless DMX Control &amp; Analysis</h3>
+                    <ul>
+                        <li><strong>Lit Systems Duo 1</strong> Spectrum, Color &amp; Exposure Meter</li>
+                        <li><strong>iPad Console</strong> running Blackout Lighting Control software</li>
+                        <li><strong>Chauvet AN-2</strong> ArtNet/sACN Node (2-Universe outputs)</li>
+                        <li><strong>Godox Timolink TX Unit</strong> (1-Universe CRMX Wireless Transmitter)</li>
+                        <li><strong>LumenRadio Moonlite 2</strong> CRMX Transceiver</li>
+                        <li><strong>TP-Link EAP 603</strong> Wireless Access Point &amp; 5-Port Network Switch</li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="kit-group">
-                <h3>Wireless DMX Control & Analysis</h3>
-                <ul>
-                    <li><strong>Lit Systems Duo 1</strong> Spectrum, Color & Exposure Meter</li>
-                    <li><strong>iPad Console</strong> running Blackout Lighting Control software</li>
-                    <li><strong>Chauvet AN-2</strong> ArtNet/sACN Node (2-Universe outputs)</li>
-                    <li><strong>Godox Timolink TX Unit</strong> (1-Universe CRMX Wireless Transmitter)</li>
-                    <li><strong>LumenRadio Moonlite 2</strong> CRMX Transceiver</li>
-                    <li><strong>TP-Link EAP 603</strong> Wireless Access Point & 5-Port Network Switch</li>
-                </ul>
-            </div>
-        </div>
-
-        <div>
-            <div class="kit-group">
-                <h3>Logistics & Vehicle</h3>
-                <ul>
-                    <li><strong>Suzuki Swift (2012)</strong> Owner/Operator Transport <span class="text-small">Available for smaller footprint jobs. Fully prepared, certified, and happy to rent & drive production vans for larger projects.</span></li>
-                    <li>*All main equipment packages securely housed with Greenkit facilities for rapid production dispatch.</li>
-                </ul>
-            </div>
-
-            <div class="kit-group">
-                <h3>Solo Shooter / B-Kit</h3>
-                <span class="text-small" style="margin-bottom: 10px;">Retained independently for specialized videography projects:</span>
-                <ul>
-                    <li>Sony FX30 / Sony A7III</li>
-                    <li>Fujinon MK18-55 / Sony GM 24-70 / 85mm f1.8</li>
-                    <li>Rode NTG2+ & VideoMic Pro+</li>
-                    <li>Sennheiser G4 Wireless Lav Kit</li>
-                    <li>3x Amaran F1 Panels & 1x T2c Tube</li>
-                    <li>Zhiyun Molus X60 RGB</li>
-                    <li>Manfrotto Tripod & Cinesaddle</li>
-                </ul>
+            <div>
+                <div class="kit-group">
+                    <h3>Solo Shooter / B-Kit</h3>
+                    <span class="text-small" style="margin-bottom: 10px;">Retained independently for specialized videography projects:</span>
+                    <ul>
+                        <li>Sony FX30 / Sony A7III</li>
+                        <li>Fujinon MK18-55 / Sony GM 24-70 / 85mm f1.8</li>
+                        <li>Rode NTG2+ &amp; VideoMic Pro+</li>
+                        <li>Sennheiser G4 Wireless Lav Kit</li>
+                        <li>3x Amaran F1 Panels &amp; 1x T2c Tube</li>
+                        <li>Zhiyun Molus X60 RGB</li>
+                        <li>Manfrotto Tripod &amp; Cinesaddle</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 
-    <h2>Qualifications & Core Skills</h2>
+    <div class="kit-group" style="margin-top: 15px;">
+        <h3>Logistics &amp; Vehicle</h3>
+        <ul>
+            <li><strong>Suzuki Swift (2012)</strong> Owner/Operator Transport <span class="text-small">Full UK Licence. Perfect for smaller footprint setups. I am also fully prepared, certified, and happy to rent and drive commercial production vans for larger productions.</span></li>
+            <li>*All main equipment packages securely housed with Greenkit facilities for rapid production dispatch.</li>
+        </ul>
+    </div>
+
+    <h2>Qualifications &amp; Core Skills</h2>
     <section class="skills-grid">
         <div class="skills-card">
             <h3>Industry Credentials</h3>
             <ul>
-                <li>City & Guilds 2365 Electrical Installation (Level 2)</li>
-                <li>IPAF 3A & 3B Powered Access License (Boom & Scissor Lifts)</li>
+                <li>City &amp; Guilds 2365 Electrical Installation (Level 2)</li>
+                <li>IPAF 3A &amp; 3B Powered Access License (Boom &amp; Scissor Lifts)</li>
                 <li>Extensive equipment Quality Assurance, testing, and rental maintenance logistics</li>
             </ul>
         </div>
         <div class="skills-card">
             <h3>On-Set Technical Proficiencies</h3>
             <ul>
-                <li>Advanced fixture rigging, structural lighting control, & light shaping</li>
+                <li>Advanced fixture rigging, structural lighting control, &amp; light shaping</li>
                 <li>Wired/Wireless network design and multi-universe DMX architecture</li>
                 <li>Calibration of fixture color matrices to match camera sensor profiles across varied color spaces</li>
             </ul>
@@ -633,7 +678,7 @@
     <section class="personal-grid">
         <div class="personal-card">
             <h4>Hobbies</h4>
-            <p>Training at the gym (7 days a week when possible), practicing Judo, playing with my cat, regular poker nights with mates, and operating as a dedicated home barista & coffee lover.</p>
+            <p>Training at the gym (7 days a week when possible), practicing Judo, playing with my cat, regular poker nights with mates, and operating as a dedicated home barista &amp; coffee lover.</p>
         </div>
         <div class="personal-card">
             <h4>Gaming</h4>
@@ -646,7 +691,7 @@
         <div class="personal-card">
             <h4>Recent Reads</h4>
             <ul class="book-list">
-                <li><em>The Iliad</em> & <em>The Odyssey</em> – Homer</li>
+                <li><em>The Iliad</em> &amp; <em>The Odyssey</em> – Homer</li>
                 <li><em>Discourses</em> – Epictetus</li>
                 <li><em>The Republic</em> – Plato</li>
                 <li><em>TOKYOO</em> – Liam Wong</li>
@@ -663,6 +708,22 @@
     </footer>
 
 </div>
+
+<script>
+    function toggleAccordion() {
+        var btn = document.querySelector(".accordion-btn");
+        var panel = document.getElementById("gearPanel");
+        
+        btn.classList.toggle("active");
+        panel.classList.toggle("open");
+        
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+    }
+</script>
 
 </body>
 </html>
