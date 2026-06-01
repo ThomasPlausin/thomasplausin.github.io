@@ -66,6 +66,11 @@
             margin: 0 -8px; /* Tights up the extra character padding to keep natural spacing */
         }
 
+        /* Fixes the missing space between THOMAS and PLAUSIN */
+        .mgs-word:first-child {
+            margin-right: 15px; 
+        }
+
         /* Standard Stencil Letter: Single horizontal gap cuts through center */
         .mgs-char {
             padding: 0 8px; /* Crucial: Gives breathing room so the stencil gradient never clips right edges */
@@ -187,6 +192,9 @@
             h1.mgs-head {
                 font-size: 2.6rem;
                 letter-spacing: 0px;
+            }
+            .mgs-word:first-child {
+                margin-right: 0px; /* Reset space on break so wrap looks seamless */
             }
         }
 
