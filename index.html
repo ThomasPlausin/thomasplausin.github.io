@@ -266,17 +266,11 @@
         /* 6-Still Custom Layout (Nosedive) */
         .grid-nosedive-6 {
             display: grid;
-            grid-template-columns: 1fr 1.3fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, 1fr);
             gap: 3px;
             height: 100%;
         }
-        .nose-n1 { grid-column: 1; grid-row: 1; }
-        .nose-n2 { grid-column: 1; grid-row: 2; }
-        .nose-n3 { grid-column: 2; grid-row: 1; } /* Medium Middle Top */
-        .nose-n4 { grid-column: 2; grid-row: 2; } /* Medium Middle Bottom */
-        .nose-n5 { grid-column: 3; grid-row: 1; }
-        .nose-n6 { grid-column: 3; grid-row: 2; }
 
         /* 6-Still Standard High-Density Row Grid (MSO) */
         .grid-mso-6 {
@@ -478,14 +472,15 @@
             margin-bottom: 8px;
         }
 
-        .personal-grid {
+        /* 3x2 Symmetrical Grid for Personal Section */
+        .personal-grid-3x2 {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 15px;
         }
 
         @media (max-width: 900px) {
-            .personal-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+            .personal-grid-3x2 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
         }
 
         .personal-card {
@@ -689,8 +684,8 @@
                 <div class="grid-tucker-5">
                     <div class="tucker-t1"><img src="images/tucker-still-01.JPG" alt="Tucker Frame 1" class="clickable-still"></div>
                     <div class="tucker-t2"><img src="images/tucker-still-02.JPG" alt="Tucker Frame 2" class="clickable-still"></div>
-                    <div class="tucker-t5"><img src="images/tucker-still-05.JPG" alt="Tucker Frame 5 - Featured Center" class="clickable-still"></div>
-                    <div class="tucker-t3"><img src="images/tucker-still-03.JPG" alt="Tucker Frame 3" class="clickable-still"></div>
+                    <div class="tucker-t5"><img src="images/tucker-still-03.JPG" alt="Tucker Frame 3 - Featured Center" class="clickable-still"></div>
+                    <div class="tucker-t3"><img src="images/tucker-still-05.JPG" alt="Tucker Frame 5" class="clickable-still"></div>
                     <div class="tucker-t4"><img src="images/tucker-still-04.JPG" alt="Tucker Frame 4" class="clickable-still"></div>
                 </div>
             </div>
@@ -703,12 +698,12 @@
         <div class="gallery-card">
             <div class="image-box-wrapper">
                 <div class="grid-nosedive-6">
-                    <div class="nose-n1"><img src="images/nosedive-still-01.jpg" alt="Nosedive Frame 1" class="clickable-still"></div>
-                    <div class="nose-n2"><img src="images/nosedive-still-02.jpg" alt="Nosedive Frame 2" class="clickable-still"></div>
-                    <div class="nose-n3"><img src="images/nosedive-still-03.jpg" alt="Nosedive Frame 3" class="clickable-still"></div>
-                    <div class="nose-n4"><img src="images/nosedive-still-04.jpg" alt="Nosedive Frame 4" class="clickable-still"></div>
-                    <div class="nose-n5"><img src="images/nosedive-still-05.jpg" alt="Nosedive Frame 5" class="clickable-still"></div>
-                    <div class="nose-n6"><img src="images/nosedive-still-06.jpg" alt="Nosedive Frame 6" class="clickable-still"></div>
+                    <div><img src="images/nosedive-still-01.jpg" alt="Nosedive Frame 1" class="clickable-still"></div>
+                    <div><img src="images/nosedive-still-02.jpg" alt="Nosedive Frame 2" class="clickable-still"></div>
+                    <div><img src="images/nosedive-still-03.jpg" alt="Nosedive Frame 3" class="clickable-still"></div>
+                    <div><img src="images/nosedive-still-04.jpg" alt="Nosedive Frame 4" class="clickable-still"></div>
+                    <div><img src="images/nosedive-still-05.jpg" alt="Nosedive Frame 5" class="clickable-still"></div>
+                    <div><img src="images/nosedive-still-06.jpg" alt="Nosedive Frame 6" class="clickable-still"></div>
                 </div>
             </div>
             <div class="card-details">
@@ -776,7 +771,7 @@
     <section id="narrative-history">
         <div class="history-block">
             <p class="about-text" style="font-size: 1.05rem; color: #cbd5e1; margin: 0; line-height: 1.7;">
-                With <strong>10 years of experience working across film and TV environments</strong>, I have spent a decade developing an intimate knowledge of modern film sets, technical protocols, and professional departmental mechanics. My path began on the floor as an extra/supporting artist, before actively progressing through hands-on technical deployments as a <strong>Camera Trainee, 2nd AC, and Grip</strong>. This comprehensive across-the-line experience gave me a deep understanding of lenses, composition, and physical movement prior to channeling my focus into the lighting department. This multi-department footprint is paired with <strong>4 years working within technical rental house infrastructure (2021–2025)</strong>, alongside serving as a specialized public-sector videographer for the <strong>NHS during the Pandemic (2020-2021)</strong>.
+                With <strong>10 years of experience working across film and TV environments</strong>, I have spent a decade developing an intimate knowledge of modern film sets, technical protocols, and professional departmental mechanics. My path began on the floor as an extra/<strong>supporting artiste</strong>, before actively progressing through hands-on technical deployments as a <strong>Camera Trainee, 2nd AC, and Grip</strong>. This comprehensive across-the-line experience gave me a deep understanding of lenses, composition, and physical movement prior to channeling my focus into the lighting department. This multi-department footprint is paired with <strong>4 years working within technical rental house infrastructure (2021–2025)</strong>, alongside serving as a specialized public-sector videographer for the <strong>NHS during the Pandemic (2020-2021)</strong>.
             </p>
         </div>
     </section>
@@ -863,7 +858,7 @@
                     <tr><td><strong>'The House'</strong></td><td>Short Film (Pilot)</td><td><span class="badge">Spark</span></td><td>August 2023</td></tr>
                     <tr><td><strong>Wolt</strong></td><td>Commercial</td><td><span class="badge">Spark</span></td><td>July 2023</td></tr>
                     <tr><td><strong>Insights</strong></td><td>Podcast</td><td><span class="badge">Spark</span></td><td>July 2023</td></tr>
-                    <tr><td><strong>Killer in the House</strong></td><td>Short Film</td><td><span class="badge">2nd AC / Spark</span></td><td>July 2023</td></tr>
+                    <tr><td><strong>Legal in the House</strong></td><td>Short Film</td><td><span class="badge">2nd AC / Spark</span></td><td>July 2023</td></tr>
                     <tr class="highlight-row"><td>🎵 <strong>'HOTEL ON THE CLIFF' Velvet Grip</strong></td><td>Live Music Video</td><td><span class="badge gaffer">Director of Photography</span></td><td>June 2023</td></tr>
                     <tr class="highlight-row"><td>🎵 <strong>'LET ME BREATHE' Velvet Grip</strong></td><td>Live Music Video</td><td><span class="badge gaffer">Director of Photography</span></td><td>June 2023</td></tr>
                     <tr><td><strong>BugBoy</strong></td><td>Short Film</td><td><span class="badge">2nd AC / Grip / Spark</span></td><td>October 2022</td></tr>
@@ -953,7 +948,7 @@
     </section>
 
     <h2>Off-Set / Interests</h2>
-    <section class="skills-grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
+    <section class="personal-grid-3x2">
         <div class="personal-card">
             <h4>Hobbies</h4>
             <p>Training at the gym (7 days a week when possible), practicing Judo, playing with my cat, regular poker nights with mates, and operating as a dedicated home barista &amp; coffee lover.</p>
@@ -978,6 +973,10 @@
         <div class="personal-card">
             <h4>Dreams</h4>
             <p>Owning a Mazda RX-7 Spirit R Type A, mastering acrobatic tricking / learning to cleanly backflip, and acquiring a home bean roaster paired with a lever-operated espresso machine setup.</p>
+        </div>
+        <div class="personal-card">
+            <h4>Favourite Foods</h4>
+            <p>Grandads goulash, my other grandads Kleftiko lamb Mums lasagne, Dads crêpes suzette, Queen mothers cake (baked by mum). Frozen berries+banana protein+creatine shake (that one is all me).</p>
         </div>
     </section>
 
