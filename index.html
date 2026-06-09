@@ -207,20 +207,20 @@
             transform: translateY(-2px);
         }
 
-        .clickable-bts {
+        .clickable-bts, .clickable-still {
             cursor: pointer;
             transition: opacity 0.2s ease, transform 0.2s ease;
         }
 
-        .clickable-bts:hover {
+        .clickable-bts:hover, .clickable-still:hover {
             opacity: 0.85;
             transform: scale(1.02);
         }
 
-        .image-container-4way {
+        /* Responsive Flexible Stills Container Grid (Supports varying counts up to 6 smoothly) */
+        .image-container-dynamic {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(65px, 1fr));
             gap: 2px;
             background-color: var(--border-color);
             height: 160px;
@@ -236,6 +236,7 @@
             text-transform: uppercase;
             font-weight: 600;
             overflow: hidden;
+            height: 100%;
         }
 
         .img-slot img {
@@ -585,116 +586,125 @@
         <div class="subtitle">Gaffer / Lighting Technician / Blackout lighting console operator</div>
         
         <div class="contact-info">
-            <div>📍 London Based (Willing to travel UK & Int.)</div>
-            <div>📞 <a href="tel:07538234827">07538 234 827</a></div>
-            <div>✉️ <a href="mailto:thomasplausin@live.co.uk">thomasplausin@live.co.uk</a></div>
+            <div>📍 London Based (Willing to travel UK & Int.) [cite: 3]</div>
+            <div>📞 <a href="tel:07538234827">07538 234 827</a> [cite: 4]</div>
+            <div>✉️ <a href="mailto:thomasplausin@live.co.uk">thomasplausin@live.co.uk</a> [cite: 5]</div>
             <div>📸 <a href="https://instagram.com/thomasplausin.sparks" target="_blank">Instagram</a></div>
         </div>
 
         <div class="cert-badges-row">
-            <span class="top-cert-badge">⚡ City &amp; Guilds 2365 Level 2 Electrical Installation Certified</span>
+            <span class="top-cert-badge">⚡ City &amp; Guilds 2365 Level 2 Electrical Installation Certified [cite: 17, 188]</span>
             <span class="top-cert-badge">🏗️ Certified IPAF Operator (3A &amp; 3B)</span>
         </div>
     </header>
 
     <section id="top-overview">
         <p class="about-text" style="font-size: 1.25rem; font-weight: 400; line-height: 1.6; color: #ffffff;">
-            <span class="text-highlight">London-based lighting technician</span>. Starting my career in the industry <span class="text-highlight">10 years ago</span> as cast, understanding set etiquette and the rhythm of the day on productions of all scales, including HETV, features, and commercials. I combine a rigorous City & Guilds 2365 <span class="text-highlight">Level 2 Electrical</span> Installation qualification and specialized <span class="text-highlight">IPAF 3A & 3B</span> machine certifications with advanced industry field experience. My technical expertise is backed by <span class="text-highlight">4 years in rental house operations</span> at Greenkit and ProcamTake2, focusing on <span class="text-highlight">wireless DMX/CRMX network deployment</span> and iPad-based control interfaces.
+            <span class="text-highlight">London-based lighting technician</span>[cite: 3, 7]. Starting my career in the industry <span class="text-highlight">10 years ago</span> as cast [cite: 41, 43], understanding set etiquette and the rhythm of the day on productions of all scales, including HETV, features, and commercials[cite: 139, 183, 185]. I combine a rigorous City & Guilds 2365 <span class="text-highlight">Level 2 Electrical</span> Installation qualification [cite: 17, 188] and specialized <span class="text-highlight">IPAF 3A & 3B</span> machine certifications with advanced industry field experience[cite: 13, 18]. My technical expertise is backed by <span class="text-highlight">4 years in rental house operations</span> at Greenkit and ProcamTake2 [cite: 15, 23], focusing on <span class="text-highlight">wireless DMX/CRMX network deployment</span> and iPad-based control interfaces[cite: 18].
         </p>
     </section>
 
     <h2>Work (Featured Projects)</h2>
     <section class="gallery-grid-3x3">
         <div class="gallery-card">
-            <div class="image-container-4way">
+            <div class="image-container-dynamic">
                 <div class="img-slot">Shot 1</div><div class="img-slot">Shot 2</div>
                 <div class="img-slot">Shot 3</div><div class="img-slot">Shot 4</div>
             </div>
             <div class="card-details">
                 <div class="card-title">WIWO</div>
-                <div class="card-meta">Short Film | <span class="badge gaffer">Gaffer</span></div>
+                <div class="card-meta">Short Film | <span class="badge gaffer">Gaffer</span> [cite: 75, 76]</div>
             </div>
         </div>
         <div class="gallery-card">
-            <div class="image-container-4way">
+            <div class="image-container-dynamic">
                 <div class="img-slot">Shot 1</div><div class="img-slot">Shot 2</div>
                 <div class="img-slot">Shot 3</div><div class="img-slot">Shot 4</div>
             </div>
             <div class="card-details">
                 <div class="card-title">Lili Curia</div>
-                <div class="card-meta">Fashion Campaign | <span class="badge gaffer">Gaffer</span></div>
+                <div class="card-meta">Fashion Campaign | <span class="badge gaffer">Gaffer</span> [cite: 97, 98]</div>
             </div>
         </div>
         <div class="gallery-card">
-            <div class="image-container-4way">
+            <div class="image-container-dynamic">
                 <div class="img-slot">Shot 1</div><div class="img-slot">Shot 2</div>
                 <div class="img-slot">Shot 3</div><div class="img-slot">Shot 4</div>
             </div>
             <div class="card-details">
                 <div class="card-title">DM</div>
-                <div class="card-meta">Short Film | <span class="badge gaffer">Gaffer</span></div>
+                <div class="card-meta">Short Film | <span class="badge gaffer">Gaffer</span> [cite: 101, 102]</div>
             </div>
         </div>
         <div class="gallery-card">
-            <div class="image-container-4way">
+            <div class="image-container-dynamic">
                 <div class="img-slot">Shot 1</div><div class="img-slot">Shot 2</div>
                 <div class="img-slot">Shot 3</div><div class="img-slot">Shot 4</div>
             </div>
             <div class="card-details">
                 <div class="card-title">Gabriel Ernest</div>
-                <div class="card-meta">Short Film (16mm) | <span class="badge gaffer">Gaffer</span></div>
+                <div class="card-meta">Short Film (16mm) | <span class="badge gaffer">Gaffer</span> [cite: 119, 120]</div>
             </div>
         </div>
         <div class="gallery-card">
-            <div class="image-container-4way">
-                <div class="img-slot"><img src="image/tucker-still-01.JPG" alt="Tucker Is Gone Frame 1"></div>
-                <div class="img-slot"><img src="image/tucker-still-02.JPG" alt="Tucker Is Gone Frame 2"></div>
-                <div class="img-slot"><img src="image/tucker-still-03.JPG" alt="Tucker Is Gone Frame 3"></div>
-                <div class="img-slot"><img src="image/tucker-still-04.JPG" alt="Tucker Is Gone Frame 4"></div>
+            <div class="image-container-dynamic">
+                <div class="img-slot"><img src="image/tucker-still-01.JPG" alt="Tucker Is Gone Frame 1" class="clickable-still"></div>
+                <div class="img-slot"><img src="image/tucker-still-02.JPG" alt="Tucker Is Gone Frame 2" class="clickable-still"></div>
+                <div class="img-slot"><img src="image/tucker-still-03.JPG" alt="Tucker Is Gone Frame 3" class="clickable-still"></div>
+                <div class="img-slot"><img src="image/tucker-still-04.JPG" alt="Tucker Is Gone Frame 4" class="clickable-still"></div>
+                <div class="img-slot"><img src="image/tucker-still-05.JPG" alt="Tucker Is Gone Frame 5" class="clickable-still"></div>
             </div>
             <div class="card-details">
                 <div class="card-title">Tucker Is Gone</div>
-                <div class="card-meta">Short Film | <span class="badge gaffer">Gaffer</span></div>
+                <div class="card-meta">Short Film | <span class="badge gaffer">Gaffer</span> [cite: 121, 122]</div>
             </div>
         </div>
         <div class="gallery-card">
-            <div class="image-container-4way">
+            <div class="image-container-dynamic">
+                <div class="img-slot"><img src="image/nosedive-still-01.JPG" alt="Nosedive Frame 1" class="clickable-still"></div>
+                <div class="img-slot"><img src="image/nosedive-still-02.JPG" alt="Nosedive Frame 2" class="clickable-still"></div>
+                <div class="img-slot"><img src="image/nosedive-still-03.JPG" alt="Nosedive Frame 3" class="clickable-still"></div>
+                <div class="img-slot"><img src="image/nosedive-still-04.JPG" alt="Nosedive Frame 4" class="clickable-still"></div>
+                <div class="img-slot"><img src="image/nosedive-still-05.JPG" alt="Nosedive Frame 5" class="clickable-still"></div>
+                <div class="img-slot"><img src="image/nosedive-still-06.JPG" alt="Nosedive Frame 6" class="clickable-still"></div>
+            </div>
+            <div class="card-details">
+                <div class="card-title">Nosedive (Man/Woman/Chainsaw)</div>
+                <div class="card-meta">Music Video | <span class="badge">Spark</span> [cite: 103, 104]</div>
+            </div>
+        </div>
+        <div class="gallery-card">
+            <div class="image-container-dynamic">
+                <div class="img-slot"><img src="image/mso-still-01.JPG" alt="MSO Frame 1" class="clickable-still"></div>
+                <div class="img-slot"><img src="image/mso-still-02.JPG" alt="MSO Frame 2" class="clickable-still"></div>
+                <div class="img-slot"><img src="image/mso-still-03.JPG" alt="MSO Frame 3" class="clickable-still"></div>
+                <div class="img-slot"><img src="image/mso-still-04.JPG" alt="MSO Frame 4" class="clickable-still"></div>
+                <div class="img-slot"><img src="image/mso-still-05.JPG" alt="MSO Frame 5" class="clickable-still"></div>
+                <div class="img-slot"><img src="image/mso-still-06.JPG" alt="MSO Frame 6" class="clickable-still"></div>
+            </div>
+            <div class="card-details">
+                <div class="card-title">McLaren Special Operations</div>
+                <div class="card-meta">Social Campaign | <span class="badge">Spark</span> [cite: 99, 100]</div>
+            </div>
+        </div>
+        <div class="gallery-card">
+            <div class="image-container-dynamic">
                 <div class="img-slot">Shot 1</div><div class="img-slot">Shot 2</div>
                 <div class="img-slot">Shot 3</div><div class="img-slot">Shot 4</div>
             </div>
             <div class="card-details">
                 <div class="card-title">This Is How It Goes</div>
-                <div class="card-meta">Major Motion Picture | <span class="badge mmp-tag">Lighting Trainee</span></div>
+                <div class="card-meta">Major Motion Picture | <span class="badge mmp-tag">Lighting Trainee</span> [cite: 139, 140]</div>
             </div>
         </div>
         <div class="gallery-card">
-            <div class="image-container-4way">
-                <div class="img-slot">Shot 1</div><div class="img-slot">Shot 2</div>
-                <div class="img-slot">Shot 3</div><div class="img-slot">Shot 4</div>
-            </div>
-            <div class="card-details">
-                <div class="card-title">McLaren Special Operations</div>
-                <div class="card-meta">Social Campaign | <span class="badge">Spark</span></div>
-            </div>
-        </div>
-        <div class="gallery-card">
-            <div class="image-container-4way">
-                <div class="img-slot">Shot 1</div><div class="img-slot">Shot 2</div>
-                <div class="img-slot">Shot 3</div><div class="img-slot">Shot 4</div>
-            </div>
-            <div class="card-details">
-                <div class="card-title">Nosedive (Man/Woman/Chainsaw)</div>
-                <div class="card-meta">Music Video | <span class="badge">Spark</span></div>
-            </div>
-        </div>
-        <div class="gallery-card">
-            <div class="image-container-4way">
+            <div class="image-container-dynamic">
                 <div class="img-slot">Shot 1</div><div class="img-slot">Shot 2</div>
                 <div class="img-slot">Shot 3</div><div class="img-slot">Shot 4</div>
             </div>
             <div class="card-details">
                 <div class="card-title">Spinning</div>
-                <div class="card-meta">Short Film | <span class="badge gaffer">Gaffer</span></div>
+                <div class="card-meta">Short Film | <span class="badge gaffer">Gaffer</span> [cite: 113, 114]</div>
             </div>
         </div>
     </section>
@@ -721,7 +731,7 @@
     <section id="narrative-history">
         <div class="history-block">
             <p class="about-text" style="font-size: 1.05rem; color: #cbd5e1; margin: 0; line-height: 1.7;">
-                With <strong>10 years of experience working across film and TV environments</strong>, I have spent a decade developing an intimate knowledge of modern film sets, technical protocols, and professional departmental mechanics. My path began on the floor as an extra/supporting artist, before actively progressing through hands-on technical deployments as a <strong>Camera Trainee, 2nd AC, and Grip</strong>. This comprehensive across-the-line experience gave me a deep understanding of lenses, composition, and physical movement prior to channeling my focus into the lighting department. This multi-department footprint is paired with <strong>4 years working within technical rental house infrastructure (2021–2025)</strong>, alongside serving as a specialized public-sector videographer for the <strong>NHS during the Pandemic (2020-2021)</strong>.
+                With <strong>10 years of experience working across film and TV environments</strong>, I have spent a decade developing an intimate knowledge of modern film sets, technical protocols, and professional departmental mechanics[cite: 7, 41]. My path began on the floor as an extra/supporting artist [cite: 40, 43], before actively progressing through hands-on technical deployments as a <strong>Camera Trainee, 2nd AC, and Grip</strong>[cite: 30, 31, 182]. This comprehensive across-the-line experience gave me a deep understanding of lenses, composition, and physical movement prior to channeling my focus into the lighting department[cite: 18]. This multi-department footprint is paired with <strong>4 years working within technical rental house infrastructure (2021–2025)</strong> [cite: 15, 23], alongside serving as a specialized public-sector videographer for the <strong>NHS during the Pandemic (2020-2021)</strong>[cite: 36, 37].
             </p>
         </div>
     </section>
@@ -740,89 +750,86 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>🎵 <strong>'BLEEDING GOLD' Wasia Project</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>June 2026</td></tr>
-                    <tr><td>💼 <strong>'STAGE IT'</strong></td><td>Corporate Advert</td><td><span class="badge">Spark / Camera Assistant</span></td><td>June 2026</td></tr>
-                    <tr><td>⚽ <strong>'THE WORLD CUP'</strong></td><td>Short Film</td><td><span class="badge gaffer">Gaffer</span></td><td>May 2026</td></tr>
-                    <tr><td><strong>'BODY MOVEMENTS' Saoirse</strong></td><td>Visualiser</td><td><span class="badge">Spark</span></td><td>May 2026</td></tr>
-                    <tr><td><strong>'Questions' Maisie Peters</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>May 2026</td></tr>
-                    <tr><td><strong>'VESSEL OF LOVE' Bones Tan Jones</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>May 2026</td></tr>
-                    <tr><td><strong>'SKYSHIPTV' PRE LIGHT</strong></td><td>Pre Light</td><td><span class="badge gaffer">Gaffer</span></td><td>May 2026</td></tr>
-                    <tr><td><strong>'CAWSTON PRESS' Drink</strong></td><td>Commercial</td><td><span class="badge">Spark</span></td><td>May 2026</td></tr>
-                    <tr><td><strong>'TT SOCKS'</strong></td><td>Commercial</td><td><span class="badge gaffer">Gaffer</span></td><td>May 2026</td></tr>
-                    <tr><td><strong>'SURPRISE SURPRISE' Chloe Qisha</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>May 2026</td></tr>
+                    <tr class="highlight-row"><td>🎬 <strong>'MOTION' CHINCHILLA</strong> [cite: 51]</td><td>Visualiser [cite: 51]</td><td><span class="badge gaffer">Gaffer</span> [cite: 52]</td><td>June 2026 [cite: 51]</td></tr>
+                    <tr><td>💼 <strong>'SWINGERS'</strong> [cite: 53]</td><td>Social Media Advert [cite: 53]</td><td><span class="badge">Spark</span> [cite: 54]</td><td>June 2026 [cite: 53]</td></tr>
+                    <tr><td>🎵 <strong>'BLEEDING GOLD' Wasia Project</strong> [cite: 55]</td><td>Music Video [cite: 55]</td><td><span class="badge">Spark</span> [cite: 56]</td><td>June 2026 [cite: 55]</td></tr>
+                    <tr><td>💼 <strong>'STAGE IT'</strong> [cite: 57]</td><td>Corporate Advert [cite: 57]</td><td><span class="badge">Spark / Camera Assistant</span> [cite: 58]</td><td>June 2026 [cite: 57]</td></tr>
                     
-                    <tr class="highlight-row"><td>🎬 <strong>'WIWO'</strong></td><td>Short Film</td><td><span class="badge gaffer">Gaffer</span></td><td>April 2026</td></tr>
+                    <tr class="highlight-row"><td>⚽ <strong>'THE WORLD CUP'</strong> [cite: 59]</td><td>Short Film [cite: 59]</td><td><span class="badge gaffer">Gaffer</span> [cite: 60]</td><td>May 2026 [cite: 59]</td></tr>
+                    <tr><td><strong>'BODY MOVEMENTS' Saoirse</strong> [cite: 61]</td><td>Visualiser [cite: 61]</td><td><span class="badge">Spark</span> [cite: 62]</td><td>May 2026 [cite: 61]</td></tr>
+                    <tr><td><strong>'Questions' Maisie Peters</strong> [cite: 63]</td><td>Music Video [cite: 63]</td><td><span class="badge">Spark</span> [cite: 64]</td><td>May 2026 [cite: 63]</td></tr>
+                    <tr><td><strong>'VESSEL OF LOVE' Bones Tan Jones</strong> [cite: 65]</td><td>Music Video [cite: 65]</td><td><span class="badge">Spark</span> [cite: 66]</td><td>May 2026 [cite: 65]</td></tr>
+                    <tr><td><strong>'SKYSHIPTV' PRE LIGHT</strong> [cite: 67]</td><td>Pre Light [cite: 67]</td><td><span class="badge gaffer">Gaffer</span> [cite: 68]</td><td>May 2026 [cite: 67]</td></tr>
+                    <tr><td><strong>'CAWSTON PRESS' Drink</strong> [cite: 69]</td><td>Commercial [cite: 69]</td><td><span class="badge">Spark</span> [cite: 70]</td><td>May 2026 [cite: 69]</td></tr>
+                    <tr><td><strong>'TT SOCKS'</strong> [cite: 71]</td><td>Commercial [cite: 71]</td><td><span class="badge gaffer">Gaffer</span> [cite: 72]</td><td>May 2026 [cite: 71]</td></tr>
+                    <tr><td><strong>'SURPRISE SURPRISE' Chloe Qisha</strong> [cite: 73]</td><td>Music Video [cite: 73]</td><td><span class="badge">Spark</span> [cite: 74]</td><td>May 2026 [cite: 73]</td></tr>
                     
-                    <tr><td><strong>'THE OATH'</strong></td><td>Short Film</td><td><span class="badge">Spark</span></td><td>April 2026</td></tr>
-                    <tr><td><strong>'SHADOW DIVA'</strong></td><td>Vertical Drama</td><td><span class="badge">Spark</span></td><td>April 2026</td></tr>
-                    <tr><td><strong>'TRUST'</strong></td><td>Short Film</td><td><span class="badge">Spark</span></td><td>April 2026</td></tr>
-                    <tr><td><strong>'POST'</strong></td><td>Short Film</td><td><span class="badge">Spark</span></td><td>April 2026</td></tr>
-                    <tr><td><strong>'COUREZ'</strong></td><td>Fashion Campaign</td><td><span class="badge">Spark</span></td><td>April 2026</td></tr>
-                    <tr><td><strong>'ALL STARS X BIEN VU'</strong></td><td>Football Campaign</td><td><span class="badge">Spark</span></td><td>April 2026</td></tr>
-                    <tr><td><strong>'VC'</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>March 2026</td></tr>
-                    <tr><td><strong>'TAKE YOU THERE' Mae Muller</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>March 2026</td></tr>
-                    <tr><td><strong>'BLACKOUT'</strong></td><td>Indie Feature</td><td><span class="badge">Spark</span></td><td>March 2026</td></tr>
-                    <tr><td><strong>'SHADOW OF AN ARISTOCRAT'</strong></td><td>Vertical Drama</td><td><span class="badge">Spark</span></td><td>March 2026</td></tr>
+                    <tr class="highlight-row"><td>🎬 <strong>'WIWO'</strong> [cite: 75]</td><td>Short Film [cite: 75]</td><td><span class="badge gaffer">Gaffer</span> [cite: 76]</td><td>April 2026 [cite: 75]</td></tr>
+                    <tr><td><strong>'THE OATH'</strong> [cite: 77]</td><td>Short Film [cite: 77]</td><td><span class="badge">Spark</span> [cite: 78]</td><td>April 2026 [cite: 77]</td></tr>
+                    <tr><td><strong>'SHADOW DIVA'</strong> [cite: 79]</td><td>Vertical Drama [cite: 79]</td><td><span class="badge">Spark</span> [cite: 80]</td><td>April 2026 [cite: 79]</td></tr>
+                    <tr><td><strong>'TRUST'</strong> [cite: 81]</td><td>Short Film [cite: 81]</td><td><span class="badge">Spark</span> [cite: 82]</td><td>April 2026 [cite: 81]</td></tr>
+                    <tr><td><strong>'POST'</strong> [cite: 83]</td><td>Short Film [cite: 83]</td><td><span class="badge">Spark</span> [cite: 84]</td><td>April 2026 [cite: 83]</td></tr>
+                    <tr><td><strong>'COUREZ'</strong> [cite: 85]</td><td>Fashion Campaign [cite: 85]</td><td><span class="badge">Spark</span> [cite: 86]</td><td>April 2026 [cite: 85]</td></tr>
+                    <tr><td><strong>'ALL STARS X BIEN VU'</strong> [cite: 87]</td><td>Football Campaign [cite: 87]</td><td><span class="badge">Spark</span> [cite: 88]</td><td>April 2026 [cite: 87]</td></tr>
                     
-                    <tr class="highlight-row"><td>⚡ <strong>Lili Curia</strong></td><td>Fashion Campaign</td><td><span class="badge gaffer">Gaffer</span></td><td>March 2026</td></tr>
-                    <tr class="highlight-row"><td>🚗 <strong>McLaren Special Operations</strong></td><td>Social Media Campaign</td><td><span class="badge">Spark</span></td><td>February 2026</td></tr>
-                    <tr class="highlight-row"><td>🎬 <strong>'DM'</strong></td><td>Short Film</td><td><span class="badge gaffer">Gaffer</span></td><td>February 2026</td></tr>
-                    <tr class="highlight-row"><td>🎵 <strong>'NOSEDIVE' Man/Woman/Chainsaw</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>February 2026</td></tr>
+                    <tr><td><strong>'VC'</strong> [cite: 89]</td><td>Music Video [cite: 89]</td><td><span class="badge">Spark</span> [cite: 90]</td><td>March 2026 [cite: 89]</td></tr>
+                    <tr><td><strong>'TAKE YOU THERE' Mae Muller</strong> [cite: 91]</td><td>Music Video [cite: 91]</td><td><span class="badge">Spark</span> [cite: 92]</td><td>March 2026 [cite: 91]</td></tr>
+                    <tr><td><strong>'BLACKOUT'</strong> [cite: 93]</td><td>Indie Feature [cite: 93]</td><td><span class="badge">Spark</span> [cite: 94]</td><td>March 2026 [cite: 93]</td></tr>
+                    <tr><td><strong>'SHADOW OF AN ARISTOCRAT'</strong> [cite: 95]</td><td>Vertical Drama [cite: 95]</td><td><span class="badge">Spark</span> [cite: 96]</td><td>March 2026 [cite: 95]</td></tr>
+                    <tr class="highlight-row"><td>⚡ <strong>Lili Curia</strong> [cite: 97]</td><td>Fashion Campaign [cite: 97]</td><td><span class="badge gaffer">Gaffer</span> [cite: 98]</td><td>March 2026 [cite: 97]</td></tr>
                     
-                    <tr><td><strong>'HEART TO HEARTBREAK' Rosa Walton</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>February 2026</td></tr>
-                    <tr><td><strong>'SORRY ANYWAY' Rosa Walton</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>February 2026</td></tr>
-                    <tr><td><strong>'TIMESWIPER'</strong></td><td>Short Film</td><td><span class="badge">Spark</span></td><td>February 2026</td></tr>
-                    <tr><td><strong>'Arthur &amp; Clara'</strong></td><td>Indie Feature Film</td><td><span class="badge bestboy">Best Boy</span></td><td>January 2026</td></tr>
-                    <tr class="highlight-row"><td>🎬 <strong>'Spinning'</strong></td><td>Short Film</td><td><span class="badge gaffer">Gaffer</span></td><td>January 2026</td></tr>
+                    <tr class="highlight-row"><td>🚗 <strong>McLaren Special Operations</strong> [cite: 99]</td><td>Social Media Campaign [cite: 99]</td><td><span class="badge">Spark</span> [cite: 100]</td><td>February 2026 [cite: 99]</td></tr>
+                    <tr class="highlight-row"><td>🎬 <strong>'DM'</strong> [cite: 101]</td><td>Short Film [cite: 101]</td><td><span class="badge gaffer">Gaffer</span> [cite: 102]</td><td>February 2026 [cite: 101]</td></tr>
+                    <tr class="highlight-row"><td>🎵 <strong>'NOSEDIVE' Man/Woman/Chainsaw</strong> [cite: 103]</td><td>Music Video [cite: 103]</td><td><span class="badge">Spark</span> [cite: 104]</td><td>February 2026 [cite: 103]</td></tr>
+                    <tr><td><strong>'HEART TO HEARTBREAK' Rosa Walton</strong> [cite: 105]</td><td>Music Video [cite: 105]</td><td><span class="badge">Spark</span> [cite: 106]</td><td>February 2026 [cite: 105]</td></tr>
+                    <tr><td><strong>'SORRY ANYWAY' Rosa Walton</strong> [cite: 107]</td><td>Music Video [cite: 107]</td><td><span class="badge">Spark</span> [cite: 108]</td><td>February 2026 [cite: 107]</td></tr>
+                    <tr><td><strong>'TIMESWIPER'</strong> [cite: 109]</td><td>Short Film [cite: 109]</td><td><span class="badge">Spark</span> [cite: 110]</td><td>February 2026 [cite: 109]</td></tr>
                     
-                    <tr><td><strong>'THE FATAL FLAW' Paris Paloma</strong></td><td>Album Cover Shoot</td><td><span class="badge">Lighting Assist / Spark</span></td><td>January 2026</td></tr>
+                    <tr><td><strong>'Arthur &amp; Clara'</strong> [cite: 111]</td><td>Indie Feature Film [cite: 111]</td><td><span class="badge bestboy">Best Boy</span> [cite: 112]</td><td>January 2026 [cite: 111]</td></tr>
+                    <tr class="highlight-row"><td>🎬 <strong>'Spinning'</strong> [cite: 113]</td><td>Short Film [cite: 113]</td><td><span class="badge gaffer">Gaffer</span> [cite: 114]</td><td>January 2026 [cite: 113]</td></tr>
+                    <tr><td><strong>'THE FATAL FLAW' Paris Paloma</strong> [cite: 115]</td><td>Album Cover Shoot [cite: 115]</td><td><span class="badge">Lighting Assist / Spark</span> [cite: 116]</td><td>January 2026 [cite: 115]</td></tr>
+                    <tr><td><strong>'PULL UP' BKLAVA</strong> [cite: 117]</td><td>Music Video [cite: 117]</td><td><span class="badge">Spark</span> [cite: 118]</td><td>January 2026 [cite: 117]</td></tr>
+                    <tr class="highlight-row"><td>🎥 <strong>'Gabriel Ernest'</strong> [cite: 119]</td><td>Short Film (16mm) [cite: 119]</td><td><span class="badge gaffer">Gaffer</span> [cite: 120]</td><td>January 2026 [cite: 119]</td></tr>
+                    <tr class="highlight-row"><td>🎬 <strong>'Tucker Is Gone'</strong> [cite: 121]</td><td>Short Film [cite: 121]</td><td><span class="badge gaffer">Gaffer</span> [cite: 122]</td><td>January 2026 [cite: 121]</td></tr>
                     
-                    <tr><td><strong>'PULL UP' BKLAVA</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>January 2026</td></tr>
-                    <tr class="highlight-row"><td>🎥 <strong>'Gabriel Ernest'</strong></td><td>Short Film (16mm)</td><td><span class="badge gaffer">Gaffer</span></td><td>January 2026</td></tr>
-                    <tr class="highlight-row"><td>🎬 <strong>'Tucker Is Gone'</strong></td><td>Short Film</td><td><span class="badge gaffer">Gaffer</span></td><td>January 2026</td></tr>
+                    <tr><td><strong>Petroleum &amp; Co Ferrari</strong> [cite: 123]</td><td>Commercial [cite: 123]</td><td><span class="badge">Spark</span> [cite: 124]</td><td>December 2025 [cite: 123]</td></tr>
+                    <tr><td><strong>'ALICE' Erin LeCount</strong> [cite: 125]</td><td>Music Video [cite: 125]</td><td><span class="badge">Spark</span> [cite: 126]</td><td>December 2025 [cite: 125]</td></tr>
+                    <tr><td><strong>'DON'T YOU SEE ME TRYING?' Erin LeCount</strong> [cite: 127]</td><td>Music Video [cite: 127]</td><td><span class="badge">Spark</span> [cite: 128]</td><td>December 2025 [cite: 127]</td></tr>
+                    <tr><td><strong>'GOOD GIRL' Paris Paloma</strong> [cite: 129]</td><td>Music Video [cite: 129]</td><td><span class="badge">Spark</span> [cite: 130]</td><td>December 2025 [cite: 129]</td></tr>
+                    <tr class="highlight-row"><td>🎬 <strong>'SEE HOW THEY GROW'</strong> [cite: 131]</td><td>Short Film [cite: 131]</td><td><span class="badge gaffer">Director of Photography</span> [cite: 132]</td><td>December 2025 [cite: 131]</td></tr>
+                    <tr><td><strong>Ugg SS26</strong> [cite: 133]</td><td>Commercial [cite: 133]</td><td><span class="badge">Spark</span> [cite: 134]</td><td>November 2025 [cite: 133]</td></tr>
+                    <tr><td><strong>Tescos</strong> [cite: 137]</td><td>Commercial [cite: 137]</td><td><span class="badge">Spark</span> [cite: 138]</td><td>November 2025 [cite: 137]</td></tr>
+                    <tr class="highlight-row"><td>🎬 <strong>'This Is How It Goes'</strong> [cite: 139]</td><td>Major Motion Picture [cite: 139]</td><td><span class="badge mmp-tag">Lighting Trainee</span> [cite: 140]</td><td>October - November 2025 [cite: 139]</td></tr>
+                    <tr><td><strong>'Sync Up'</strong> [cite: 141]</td><td>Short Film [cite: 141]</td><td><span class="badge">Spark</span> [cite: 142]</td><td>September 2025 [cite: 141]</td></tr>
+                    <tr><td><strong>'Animals'</strong> [cite: 143]</td><td>Short Film [cite: 143]</td><td><span class="badge mmp-tag">Lighting Trainee</span> [cite: 144]</td><td>September 2025 [cite: 143]</td></tr>
+                    <tr><td><strong>Pandora Nox - 'EXOSCISSORING'</strong> [cite: 145]</td><td>Music Video [cite: 145]</td><td><span class="badge">Spark</span> [cite: 146]</td><td>September 2025 [cite: 145]</td></tr>
+                    <tr><td><strong>London Fashion Week</strong> [cite: 147]</td><td>Live Event [cite: 147]</td><td><span class="badge">Spark</span> [cite: 148]</td><td>September 2025 [cite: 147]</td></tr>
+                    <tr><td><strong>Cosad Womens Outerwear</strong> [cite: 149]</td><td>Commercial [cite: 149]</td><td><span class="badge">Spark</span> [cite: 150]</td><td>August 2025 [cite: 149]</td></tr>
+                    <tr><td><strong>Samsung Fold</strong> [cite: 151]</td><td>Commercial [cite: 151]</td><td><span class="badge">Spark</span> [cite: 152]</td><td>May 2025 [cite: 151]</td></tr>
+                    <tr class="highlight-row"><td>🤸‍♂️ <strong>Brotherhood Taekwondo</strong> [cite: 153]</td><td>Promo [cite: 153]</td><td><span class="badge gaffer">Director of Photography</span> [cite: 154]</td><td>April 2025 [cite: 153]</td></tr>
+                    <tr><td><strong>'Every Yellow Car'</strong> [cite: 155]</td><td>Short Film [cite: 155]</td><td><span class="badge">Spark</span> [cite: 156]</td><td>February 2025 [cite: 155]</td></tr>
+                    <tr><td><strong>'Portfolio Shoot' Luke Teusch</strong> [cite: 157]</td><td>Cinematography Portfolio [cite: 157]</td><td><span class="badge">Spark</span> [cite: 158]</td><td>February 2025 [cite: 157]</td></tr>
                     
-                    <tr><td><strong>Petroleum &amp; Co Ferrari</strong></td><td>Commercial</td><td><span class="badge">Spark</span></td><td>December 2025</td></tr>
-                    <tr><td><strong>'ALICE' Erin LeCount</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>December 2025</td></tr>
-                    <tr><td><strong>'DON'T YOU SEE ME TRYING?' Erin LeCount</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>December 2025</td></tr>
-                    <tr><td><strong>'GOOD GIRL' Paris Paloma</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>December 2025</td></tr>
-                    <tr><td><strong>'SEE HOW THEY GROW'</strong></td><td>Short Film</td><td><span class="badge gaffer">Director of Photography</span></td><td>December 2025</td></tr>
-                    <tr><td><strong>Ugg SS26</strong></td><td>Commercial</td><td><span class="badge">Spark</span></td><td>November 2025</td></tr>
-                    <tr><td><strong>Ugg SS26</strong></td><td>Commercial</td><td><span class="badge">Spark</span></td><td>November 2025</td></tr>
-                    <tr><td><strong>Tescos</strong></td><td>Commercial</td><td><span class="badge">Spark</span></td><td>November 2025</td></tr>
-                    
-                    <tr class="highlight-row"><td>🎬 <strong>'This Is How It Goes'</strong></td><td>Major Motion Picture</td><td><span class="badge mmp-tag">Lighting Trainee</span></td><td>October - November 2025</td></tr>
-                    
-                    <tr><td><strong>'Sync Up'</strong></td><td>Short Film</td><td><span class="badge">Spark</span></td><td>September 2025</td></tr>
-                    <tr><td><strong>'Animals'</strong></td><td>Short Film</td><td><span class="badge mmp-tag">Lighting Trainee</span></td><td>September 2025</td></tr>
-                    <tr><td><strong>Pandora Nox - 'EXOSCISSORING'</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>September 2025</td></tr>
-                    <tr><td><strong>London Fashion Week</strong></td><td>Live Event</td><td><span class="badge">Spark</span></td><td>September 2025</td></tr>
-                    <tr><td><strong>Cosad Womens Outerwear</strong></td><td>Commercial</td><td><span class="badge">Spark</span></td><td>August 2025</td></tr>
-                    <tr><td><strong>Samsung Fold</strong></td><td>Commercial</td><td><span class="badge">May 2025</span></td><td>May 2025</td></tr>
-                    <tr><td><strong>Brotherhood Taekwondo</strong></td><td>Promo</td><td><span class="badge gaffer">Director of Photography</span></td><td>April 2025</td></tr>
-                    <tr><td><strong>'Every Yellow Car'</strong></td><td>Short Film</td><td><span class="badge">Spark</span></td><td>February 2025</td></tr>
-                    <tr><td><strong>'Portfolio Shoot' Luke Teusch</strong></td><td>Cinematography Portfolio</td><td><span class="badge">Spark</span></td><td>February 2025</td></tr>
-                    
-                    <tr><td><strong>'HARK!' Joviale</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>October 2024</td></tr>
-                    <tr><td><strong>Jamie Hance Self Tape</strong></td><td>Actor/Musician Clip</td><td><span class="badge gaffer">Gaffer</span></td><td>August 2024</td></tr>
-                    <tr><td><strong>'Spectral Daze'</strong></td><td>Movement Art Piece</td><td><span class="badge">Spark</span></td><td>June 2024</td></tr>
-                    <tr><td><strong>'Almost Home'</strong></td><td>Short Film</td><td><span class="badge">Spark</span></td><td>April 2024</td></tr>
-                    <tr><td><strong>Simply Be AW23</strong></td><td>Fashion Shoot</td><td><span class="badge">Spark</span></td><td>August 2023</td></tr>
-                    <tr><td><strong>'The House'</strong></td><td>Short Film (Pilot)</td><td><span class="badge">Spark</span></td><td>August 2023</td></tr>
-                    <tr><td><strong>Wolt</strong></td><td>Commercial</td><td><span class="badge">Spark</span></td><td>July 2023</td></tr>
-                    <tr><td><strong>Insights</strong></td><td>Podcast</td><td><span class="badge">Spark</span></td><td>July 2023</td></tr>
-                    <tr><td><strong>Killer in the House</strong></td><td>Short Film</td><td><span class="badge">2nd Assistant Camera / Spark</span></td><td>July 2023</td></tr>
-                    <tr><td><strong>'HOTEL ON THE CLIFF' Velvet Grip</strong></td><td>Live Music Video</td><td><span class="badge gaffer">Director of Photography</span></td><td>June 2023 (5-Cam Solo Op)</td></tr>
-                    <tr><td><strong>'LET ME BREATHE' Velvet Grip</strong></td><td>Live Music Video</td><td><span class="badge gaffer">Director of Photography</span></td><td>June 2023 (5-Cam Solo Op)</td></tr>
-                    <tr><td> BugBoy | Short Film, Oct 2022 | 2nd AC / Grip / Spark</td><td>Short Film</td><td><span class="badge">2nd AC / Grip / Spark</span></td><td>October 2022</td></tr>
-                    <tr><td> Strike: Lethal White | TV series, Nov 2019 | Camera trainee.</td><td>TV Series</td><td><span class="badge">Camera Trainee</span></td><td>November 2019</td></tr>
-                    <tr><td> Forgiving Earth | Netflix Production, July 2017 | Placement as camera trainee through The Prince’s Trust.</td><td>Netflix Production</td><td><span class="badge">Camera Trainee</span></td><td>July 2017</td></tr>
+                    <tr><td><strong>'HARK!' Joviale</strong> [cite: 159]</td><td>Music Video [cite: 159]</td><td><span class="badge">Spark</span> [cite: 160]</td><td>October 2024 [cite: 159]</td></tr>
+                    <tr><td><strong>Jamie Hance Self Tape</strong> [cite: 161]</td><td>Actor/Musician Clip [cite: 161]</td><td><span class="badge gaffer">Gaffer</span> [cite: 162]</td><td>August 2024 [cite: 161]</td></tr>
+                    <tr><td><strong>'Spectral Daze'</strong> [cite: 163]</td><td>Movement Art Piece [cite: 163]</td><td><span class="badge">Spark</span> [cite: 164]</td><td>June 2024 [cite: 163]</td></tr>
+                    <tr><td><strong>'Almost Home'</strong> [cite: 165]</td><td>Short Film [cite: 165]</td><td><span class="badge">Spark</span> [cite: 166]</td><td>April 2024 [cite: 165]</td></tr>
+                    <tr><td><strong>Simply Be AW23</strong> [cite: 167]</td><td>Fashion Shoot [cite: 167]</td><td><span class="badge">Spark</span> [cite: 168]</td><td>August 2023 [cite: 167]</td></tr>
+                    <tr><td><strong>'The House'</strong> [cite: 169]</td><td>Short Film (Pilot) [cite: 169]</td><td><span class="badge">Spark</span> [cite: 170]</td><td>August 2023 [cite: 169]</td></tr>
+                    <tr><td><strong>Wolt</strong> [cite: 171]</td><td>Commercial [cite: 171]</td><td><span class="badge">Spark</span> [cite: 172]</td><td>July 2023 [cite: 171]</td></tr>
+                    <tr><td><strong>Insights</strong> [cite: 173]</td><td>Podcast [cite: 173]</td><td><span class="badge">Spark</span> [cite: 174]</td><td>July 2023 [cite: 173]</td></tr>
+                    <tr><td><strong>Killer in the House</strong> [cite: 175]</td><td>Short Film [cite: 175]</td><td><span class="badge">2nd AC / Spark</span> [cite: 176]</td><td>July 2023 [cite: 175]</td></tr>
+                    <tr class="highlight-row"><td>🎵 <strong>'HOTEL ON THE CLIFF' Velvet Grip</strong> [cite: 177]</td><td>Live Music Video [cite: 177]</td><td><span class="badge gaffer">Director of Photography</span> [cite: 178]</td><td>June 2023 (5-Cam Solo Op) [cite: 177, 178]</td></tr>
+                    <tr class="highlight-row"><td>🎵 <strong>'LET ME BREATHE' Velvet Grip</strong> [cite: 179]</td><td>Live Music Video [cite: 179]</td><td><span class="badge gaffer">Director of Photography</span> [cite: 180]</td><td>June 2023 (5-Cam Solo Op) [cite: 179, 180]</td></tr>
+                    <tr><td><strong>BugBoy</strong> [cite: 181]</td><td>Short Film [cite: 181]</td><td><span class="badge">2nd AC / Grip / Spark</span> [cite: 182]</td><td>October 2022 [cite: 181]</td></tr>
+                    <tr><td><strong>Strike: Lethal White</strong> [cite: 183]</td><td>TV Series [cite: 183]</td><td><span class="badge">Camera Trainee</span> [cite: 184]</td><td>November 2019 [cite: 183]</td></tr>
+                    <tr><td><strong>Forgiving Earth</strong> [cite: 185]</td><td>Netflix Production [cite: 185]</td><td><span class="badge">Camera Trainee</span> [cite: 186]</td><td>July 2017 [cite: 185, 186]</td></tr>
                 </tbody>
             </table>
         </div>
     </div>
 
     <h2>Equipment Inventory &amp; Logistics</h2>
-
     <button class="accordion-btn" onclick="toggleAccordion('gearPanel', this)">📡 View Complete Equipment Inventory (Light Heads &amp; B-Kit)</button>
     <div id="gearPanel" class="accordion-panel">
         <div class="kit-container">
@@ -874,7 +881,7 @@
             <h3>Logistics &amp; Vehicle</h3>
             <ul>
                 <li><strong>Suzuki Swift (2012)</strong> Owner/Operator Transport <span class="text-small">Full UK Licence. Perfect for smaller footprint setups. I am also fully prepared, certified, and happy to rent and drive commercial production vans for larger productions.</span></li>
-                <li>*All main equipment packages securely housed with Greenkit facilities for rapid production dispatch.</li>
+                <li>*All main equipment packages securely housed with Greenkit facilities for rapid production dispatch. [cite: 14, 16]</li>
             </ul>
         </div>
     </div>
@@ -884,18 +891,18 @@
         <div class="skills-card">
             <h3>Industry Credentials</h3>
             <ul>
-                <li>City &amp; Guilds 2365 Electrical Installation (Level 2)</li>
+                <li>City &amp; Guilds 2365 Electrical Installation (Level 2) [cite: 17, 188]</li>
                 <li>IPAF 3A &amp; 3B Powered Access License (Boom &amp; Scissor Lifts)</li>
-                <li>Extensive experience in rentals performing equipment quality assurance, testing, maintenance and repairs.</li>
-                <li>Extensive field experience spanning a diverse range of production scales and formats—including Major Motion Pictures, HETV, Commercials, Indie Features, Short Films, Music Videos, and High-End Stills; fully adaptable to any set environment or workflow speed.</li>
+                <li>Extensive experience in rentals performing equipment quality assurance, testing, maintenance and repairs. [cite: 16, 24, 25]</li>
+                <li>Extensive field experience spanning a diverse range of production scales and formats—including Major Motion Pictures, HETV, Commercials, Indie Features, Short Films, Music Videos, and High-End Stills; fully adaptable to any set environment or workflow speed. [cite: 13, 18]</li>
             </ul>
         </div>
         <div class="skills-card">
             <h3>On-Set Technical Proficiencies</h3>
             <ul>
-                <li><strong>Console &amp; Desk Operations:</strong> Network architecture design via wired ArtNet/sACN nodes and wireless CRMX control systems running Blackout ecosystems.</li>
-                <li>Advanced fixture rigging, structural lighting control, &amp; light shaping.</li>
-                <li><strong>Advanced Light &amp; Color Analysis:</strong> Utilizing advanced photometric light meters and full-spectrum colorimetry to dial in exposure ratios, evaluate flicker, adjust color temperature/WB, and match outputs seamlessly across mismatched lighting fixtures and camera profiles.</li>
+                <li><strong>Console &amp; Desk Operations:</strong> Network architecture design via wired ArtNet/sACN nodes and wireless CRMX control systems running Blackout ecosystems. [cite: 18]</li>
+                <li>Advanced fixture rigging, structural lighting control, &amp; light shaping. [cite: 18]</li>
+                <li><strong>Advanced Light &amp; Color Analysis:</strong> Utilizing advanced photometric light meters and full-spectrum colorimetry to dial in exposure ratios, evaluate flicker, adjust color temperature/WB, and match outputs seamlessly across mismatched lighting fixtures and camera profiles. [cite: 18]</li>
             </ul>
         </div>
     </section>
@@ -950,13 +957,13 @@
         }
     }
 
-    // Lightbox Logic Integration
+    // Lightbox Logic Integration for Stills & BTS
     var modal = document.getElementById("customLightbox");
     var modalImg = document.getElementById("lightboxTargetImg");
     var closeSpan = document.getElementsByClassName("lightbox-close")[0];
-    var btsImages = document.querySelectorAll(".clickable-bts");
+    var clickableMedia = document.querySelectorAll(".clickable-bts, .clickable-still");
 
-    btsImages.forEach(function(img) {
+    clickableMedia.forEach(function(img) {
         img.addEventListener("click", function() {
             modal.style.display = "block";
             modalImg.src = this.src;
