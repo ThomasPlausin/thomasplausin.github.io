@@ -182,8 +182,17 @@
             margin-bottom: 40px;
         }
 
+        /* 4x3 Grid Layout Configuration for Behind The Scenes Gallery */
+        .gallery-grid-4x3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, auto);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
         @media (max-width: 768px) {
-            .gallery-grid-3x3 {
+            .gallery-grid-3x3, .gallery-grid-4x3 {
                 grid-template-columns: 1fr;
             }
             h1.mgs-head {
@@ -647,7 +656,7 @@
                 <div class="grid-placeholder"><div>Shot 1</div><div>Shot 2</div><div>Shot 3</div><div>Shot 4</div></div>
             </div>
             <div class="card-details">
-                <div class="card-title">WIWO</div>
+                <div class="card-title">WHEN I WAS OLDER (WIWO)</div>
                 <div class="card-meta">Short Film | <span class="badge gaffer">Gaffer</span></div>
             </div>
         </div>
@@ -750,16 +759,19 @@
     </section>
 
     <h2>Behind The Scenes (BTS) on Set</h2>
-    <section class="gallery-grid-3x3">
+    <section class="gallery-grid-4x3">
         <div class="gallery-card"><img src="images/bts1.jpeg" alt="BTS 1" class="clickable-bts" style="width:100%; height:160px; object-fit:cover; object-position: center 62%; display:block;"></div>
         <div class="gallery-card"><img src="images/bts2.jpg" alt="BTS 2" class="clickable-bts" style="width:100%; height:160px; object-fit:cover; object-position: center 20%; display:block;"></div>
-        <div class="gallery-card"><img src="images/bts8.jpeg" alt="BTS 8" class="clickable-bts" style="width:100%; height:160px; object-fit:cover; display:block;"></div>
+        <div class="gallery-card"><img src="images/bts3.jpg" alt="BTS 3" class="clickable-bts" style="width:100%; height:160px; object-fit:cover; display:block;"></div>
         <div class="gallery-card"><img src="images/bts4.jpeg" alt="BTS 4" class="clickable-bts" style="width:100%; height:160px; object-fit:cover; object-position: center 25%; display:block;"></div>
         <div class="gallery-card"><img src="images/bts5.jpeg" alt="BTS 5" class="clickable-bts" style="width:100%; height:160px; object-fit:cover; object-position: center 36%; display:block;"></div>
         <div class="gallery-card"><img src="images/bts6.JPG" alt="BTS 6" class="clickable-bts" style="width:100%; height:160px; object-fit:cover; display:block;"></div>
         <div class="gallery-card"><img src="images/bts7.jpeg" alt="BTS 7" class="clickable-bts" style="width:100%; height:160px; object-fit:cover; object-position: center 65%; display:block;"></div>
-        <div class="gallery-card"><img src="images/bts3.jpg" alt="BTS 3" class="clickable-bts" style="width:100%; height:160px; object-fit:cover; display:block;"></div>
+        <div class="gallery-card"><img src="images/bts8.jpeg" alt="BTS 8" class="clickable-bts" style="width:100%; height:160px; object-fit:cover; display:block;"></div>
+        <div class="gallery-card"><img src="images/bts9.jpg" alt="BTS 9 Placeholder" class="clickable-bts" style="width:100%; height:160px; object-fit:cover; display:block;"></div>
         <div class="gallery-card"><img src="images/bts10.JPG" alt="BTS 10" class="clickable-bts" style="width:100%; height:160px; object-fit:cover; object-position: center 40%; display:block;"></div>
+        <div class="gallery-card"><img src="images/bts11.jpg" alt="BTS 11 Placeholder" class="clickable-bts" style="width:100%; height:160px; object-fit:cover; display:block;"></div>
+        <div class="gallery-card"><img src="images/bts12.jpg" alt="BTS 12 Placeholder" class="clickable-bts" style="width:100%; height:160px; object-fit:cover; display:block;"></div>
     </section>
 
     <div id="customLightbox" class="lightbox-modal">
@@ -795,7 +807,7 @@
                     <tr><td>🎵 <strong>'BLEEDING GOLD' Wasia Project</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>June 2026</td></tr>
                     <tr><td>💼 <strong>'STAGE IT'</strong></td><td>Corporate Advert</td><td><span class="badge">Spark / Camera Assistant</span></td><td>June 2026</td></tr>
                     
-                    <tr class="highlight-row"><td>⚽ <strong>'THE WORLD CUP'</strong></td><td>Short Film</td><td><span class="badge gaffer">Gaffer</span></td><td>May 2026</td></tr>
+                    <tr><td>⚽ <strong>'THE WORLD CUP'</strong></td><td>Short Film</td><td><span class="badge gaffer">Gaffer</span></td><td>May 2026</td></tr>
                     <tr><td><strong>'BODY MOVEMENTS' Saoirse</strong></td><td>Visualiser</td><td><span class="badge">Spark</span></td><td>May 2026</td></tr>
                     <tr><td><strong>'Questions' Maisie Peters</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>May 2026</td></tr>
                     <tr><td><strong>'VESSEL OF LOVE' Bones Tan Jones</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>May 2026</td></tr>
@@ -804,7 +816,7 @@
                     <tr><td><strong>'TT SOCKS'</strong></td><td>Commercial</td><td><span class="badge gaffer">Gaffer</span></td><td>May 2026</td></tr>
                     <tr><td><strong>'SURPRISE SURPRISE' Chloe Qisha</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>May 2026</td></tr>
                     
-                    <tr class="highlight-row"><td>🎬 <strong>'WIWO'</strong></td><td>Short Film</td><td><span class="badge gaffer">Gaffer</span></td><td>April 2026</td></tr>
+                    <tr class="highlight-row"><td>🎬 <strong>'WHEN I WAS OLDER' (WIWO)</strong></td><td>Short Film</td><td><span class="badge gaffer">Gaffer</span></td><td>April 2026</td></tr>
                     <tr><td><strong>'THE OATH'</strong></td><td>Short Film</td><td><span class="badge">Spark</span></td><td>April 2026</td></tr>
                     <tr><td><strong>'SHADOW DIVA'</strong></td><td>Vertical Drama</td><td><span class="badge">Spark</span></td><td>April 2026</td></tr>
                     <tr><td><strong>'TRUST'</strong></td><td>Short Film</td><td><span class="badge">Spark</span></td><td>April 2026</td></tr>
@@ -815,7 +827,7 @@
                     <tr><td><strong>'VC'</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>March 2026</td></tr>
                     <tr><td><strong>'TAKE YOU THERE' Mae Muller</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>March 2026</td></tr>
                     <tr><td><strong>'BLACKOUT'</strong></td><td>Indie Feature</td><td><span class="badge">Spark</span></td><td>March 2026</td></tr>
-                    <tr><td><strong>'SHADOW OF AN ARISTOCRAT'</strong></td><td>Vertical Drama</td><td><span class="badge">Spark</span></td><td>March 2026</td></tr>
+                    <tr><td><strong>'SHADOW of AN ARISTOCRAT'</strong></td><td>Vertical Drama</td><td><span class="badge">Spark</span></td><td>March 2026</td></tr>
                     <tr class="highlight-row"><td>⚡ <strong>Lili Curia</strong></td><td>Fashion Campaign</td><td><span class="badge gaffer">Gaffer</span></td><td>March 2026</td></tr>
                     
                     <tr class="highlight-row"><td>🚗 <strong>McLaren Special Operations</strong></td><td>Social Media Campaign</td><td><span class="badge">Spark</span></td><td>February 2026</td></tr>
@@ -836,7 +848,7 @@
                     <tr><td><strong>'ALICE' Erin LeCount</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>December 2025</td></tr>
                     <tr><td><strong>'DON'T YOU SEE ME TRYING?' Erin LeCount</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>December 2025</td></tr>
                     <tr><td><strong>'GOOD GIRL' Paris Paloma</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>December 2025</td></tr>
-                    <tr class="highlight-row"><td>🎬 <strong>'SEE HOW THEY GROW'</strong></td><td>Short Film</td><td><span class="badge gaffer">Director of Photography</span></td><td>December 2025</td></tr>
+                    <tr><td><strong>'SEE HOW THEY GROW'</strong></td><td>Short Film</td><td><span class="badge">Director of Photography</span></td><td>December 2025</td></tr>
                     <tr><td><strong>Ugg SS26</strong></td><td>Commercial</td><td><span class="badge">Spark</span></td><td>November 2025</td></tr>
                     <tr><td><strong>Tescos</strong></td><td>Commercial</td><td><span class="badge">Spark</span></td><td>November 2025</td></tr>
                     <tr class="highlight-row"><td>🎬 <strong>'This Is How It Goes'</strong></td><td>Major Motion Picture</td><td><span class="badge mmp-tag">Lighting Trainee</span></td><td>October - November 2025</td></tr>
@@ -846,7 +858,7 @@
                     <tr><td><strong>London Fashion Week</strong></td><td>Live Event</td><td><span class="badge">Spark</span></td><td>September 2025</td></tr>
                     <tr><td><strong>Cosad Womens Outerwear</strong></td><td>Commercial</td><td><span class="badge">Spark</span></td><td>August 2025</td></tr>
                     <tr><td><strong>Samsung Fold</strong></td><td>Commercial</td><td><span class="badge">Spark</span></td><td>May 2025</td></tr>
-                    <tr class="highlight-row"><td>🤸‍♂️ <strong>Brotherhood Taekwondo</strong></td><td>Promo</td><td><span class="badge gaffer">Director of Photography</span></td><td>April 2025</td></tr>
+                    <tr><td><strong>Brotherhood Taekwondo</strong></td><td>Promo</td><td><span class="badge gaffer">Director of Photography</span></td><td>April 2025</td></tr>
                     <tr><td><strong>'Every Yellow Car'</strong></td><td>Short Film</td><td><span class="badge">Spark</span></td><td>February 2025</td></tr>
                     <tr><td><strong>'Portfolio Shoot' Luke Teusch</strong></td><td>Cinematography Portfolio</td><td><span class="badge">Spark</span></td><td>February 2025</td></tr>
                     
@@ -859,8 +871,9 @@
                     <tr><td><strong>Wolt</strong></td><td>Commercial</td><td><span class="badge">Spark</span></td><td>July 2023</td></tr>
                     <tr><td><strong>Insights</strong></td><td>Podcast</td><td><span class="badge">Spark</span></td><td>July 2023</td></tr>
                     <tr><td><strong>Killer in the House</strong></td><td>Short Film</td><td><span class="badge">2nd AC / Spark</span></td><td>July 2023</td></tr>
-                    <tr class="highlight-row"><td>🎵 <strong>'HOTEL ON THE CLIFF' Velvet Grip</strong></td><td>Live Music Video</td><td><span class="badge gaffer">Director of Photography</span></td><td>June 2023</td></tr>
-                    <tr class="highlight-row"><td>🎵 <strong>'LET ME BREATHE' Velvet Grip</strong></td><td>Live Music Video</td><td><span class="badge gaffer">Director of Photography</span></td><td>June 2023</td></tr>
+                    <tr><td><strong>Joe Wicks x Bupa</strong></td><td>Podcast</td><td><span class="badge">Spark</span></td><td>July 2023</td></tr>
+                    <tr><td><strong>'HOTEL ON THE CLIFF' Velvet Grip</strong></td><td>Live Music Video</td><td><span class="badge gaffer">Director of Photography</span></td><td>June 2023</td></tr>
+                    <tr><td><strong>'LET ME BREATHE' Velvet Grip</strong></td><td>Live Music Video</td><td><span class="badge gaffer">Director of Photography</span></td><td>June 2023</td></tr>
                     <tr><td><strong>BugBoy</strong></td><td>Short Film</td><td><span class="badge">2nd AC / Grip / Spark</span></td><td>October 2022</td></tr>
                     <tr><td><strong>Strike: Lethal White</strong></td><td>TV Series</td><td><span class="badge">Camera Trainee</span></td><td>November 2019</td></tr>
                     <tr><td><strong>Forgiving Earth</strong></td><td>Netflix Production</td><td><span class="badge">Camera Trainee</span></td><td>July 2017</td></tr>
@@ -885,10 +898,17 @@
                         <li>🪈 <strong>1x ARRI Omnibar Combo Kit</strong> <span class="text-small">Includes 4x Omnibar 4 (4ft) &amp; 4x Omnibar 2 (2ft) Modular Pixel LED fixtures.</span></li>
                     </ul>
                 </div>
+                
                 <div class="kit-group">
-                    <h3>Wireless DMX Control &amp; Analysis</h3>
+                    <h3>Photometric &amp; Color Analysis</h3>
                     <ul>
                         <li>📟 <strong>Lit Systems Duo 1</strong> Spectrum, Color &amp; Exposure Meter</li>
+                    </ul>
+                </div>
+
+                <div class="kit-group">
+                    <h3>Wireless DMX Control &amp; Network Architecture</h3>
+                    <ul>
                         <li>📱 <strong>iPad Console</strong> running Blackout Lighting Control software</li>
                         <li>🌐 <strong>Chauvet AN-2</strong> ArtNet/sACN Node (2-Universe outputs)</li>
                         <li>📡 <strong>Godox Timolink TX Unit</strong> (1-Universe CRMX Wireless Transmitter)</li>
