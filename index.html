@@ -258,6 +258,14 @@
             font-weight: 600;
         }
 
+        /* Lili Curia 3-Slice Custom Grid */
+        .grid-lilicuria-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3px;
+            height: 100%;
+        }
+
         /* 5-Still Custom Layout (Tucker) */
         .grid-tucker-5 {
             display: grid;
@@ -667,7 +675,11 @@
         </div>
         <div class="gallery-card">
             <div class="image-box-wrapper">
-                <div class="grid-placeholder"><div>Shot 1</div><div>Shot 2</div><div>Shot 3</div><div>Shot 4</div></div>
+                <div class="grid-lilicuria-3">
+                    <div><img src="images/Lilicuria-still-1.JPG" alt="Lili Curia Slice 1" class="clickable-still" style="width: 100%; height: 100%; object-fit: cover; object-position: center;"></div>
+                    <div><img src="images/Lilicuria-still-2.JPG" alt="Lili Curia Slice 2" class="clickable-still" style="width: 100%; height: 100%; object-fit: cover; object-position: center;"></div>
+                    <div><img src="images/Lilicuria-still-3.JPG" alt="Lili Curia Slice 3" class="clickable-still" style="width: 100%; height: 100%; object-fit: cover; object-position: center;"></div>
+                </div>
             </div>
             <div class="card-details">
                 <div class="card-title">Lili Curia</div>
