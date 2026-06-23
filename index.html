@@ -175,24 +175,23 @@
             font-weight: 700;
         }
 
-        .gallery-grid-3x3 {
+        /* Perfectly Balanced 6-Project Dynamic Grid Layout */
+        .featured-works-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
             margin-bottom: 40px;
         }
 
-        /* 4x3 Grid Layout Configuration for Behind The Scenes Gallery */
         .gallery-grid-4x3 {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(4, auto);
             gap: 20px;
             margin-bottom: 40px;
         }
 
         @media (max-width: 768px) {
-            .gallery-grid-3x3, .gallery-grid-4x3 {
+            .featured-works-grid, .gallery-grid-4x3 {
                 grid-template-columns: 1fr;
             }
             h1.mgs-head {
@@ -266,6 +265,21 @@
             height: 100%;
         }
 
+        /* Gabriel Ernest 6-Still Advanced Custom Layout (2 Large Central Stacked, 4 Small Corners) */
+        .grid-gabriel-6 {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 3px;
+            height: 100%;
+        }
+        .gabriel-c1 { grid-column: 1; grid-row: 1; }
+        .gabriel-c2 { grid-column: 1; grid-row: 2; }
+        .gabriel-center-top { grid-column: 2; grid-row: 1; }  /* Still 01 Featured Center-Top */
+        .gabriel-center-bottom { grid-column: 2; grid-row: 2; } /* Still 06 Featured Center-Bottom */
+        .gabriel-c3 { grid-column: 3; grid-row: 1; }
+        .gabriel-c4 { grid-column: 3; grid-row: 2; }
+
         /* 5-Still Custom Layout (Tucker) */
         .grid-tucker-5 {
             display: grid;
@@ -276,7 +290,7 @@
         }
         .tucker-t1 { grid-column: 1; grid-row: 1; }
         .tucker-t2 { grid-column: 1; grid-row: 2; }
-        .tucker-t5 { grid-column: 2; grid-row: 1 / span 2; } /* Large Center Frame */
+        .tucker-t5 { grid-column: 2; grid-row: 1 / span 2; }
         .tucker-t3 { grid-column: 3; grid-row: 1; }
         .tucker-t4 { grid-column: 3; grid-row: 2; }
 
@@ -552,7 +566,7 @@
             color: #ffffff;
         }
 
-        .card-meta {
+        .card-details .card-meta {
             font-size: 0.9rem;
             color: var(--text-muted);
         }
@@ -658,7 +672,44 @@
     </section>
 
     <h2>Work (Featured Projects)</h2>
-    <section class="gallery-grid-3x3">
+    <!-- Clean 6-Item Selected Works Layout Grid -->
+    <section class="featured-works-grid">
+        
+        <!-- Slot 1: Lili Curia -->
+        <div class="gallery-card">
+            <div class="image-box-wrapper">
+                <div class="grid-lilicuria-3">
+                    <div><img src="images/Lilicuria-still-1.JPG" alt="Lili Curia Slice 1" class="clickable-still" style="width: 100%; height: 100%; object-fit: cover; object-position: center;"></div>
+                    <div><img src="images/Lilicuria-still-2.JPG" alt="Lili Curia Slice 2" class="clickable-still" style="width: 100%; height: 100%; object-fit: cover; object-position: center;"></div>
+                    <div><img src="images/Lilicuria-still-3.JPG" alt="Lili Curia Slice 3" class="clickable-still" style="width: 100%; height: 100%; object-fit: cover; object-position: center;"></div>
+                </div>
+            </div>
+            <div class="card-details">
+                <div class="card-title">Lili Curia</div>
+                <div class="card-meta">Fashion Campaign | <span class="badge gaffer">Gaffer</span></div>
+            </div>
+        </div>
+
+        <!-- Slot 2: Gabriel Ernest (Advanced 2-Stacked Central Layout) -->
+        <div class="gallery-card">
+            <div class="image-box-wrapper">
+                <div class="grid-gabriel-6">
+                    <div class="gabriel-c1"><img src="images/gabriel-still-02.jpeg" alt="Gabriel Ernest Frame 2" class="clickable-still"></div>
+                    <div class="gabriel-c2"><img src="images/gabriel-still-03.jpeg" alt="Gabriel Ernest Frame 3" class="clickable-still"></div>
+                    <!-- Central Stacked Feature Elements -->
+                    <div class="gabriel-center-top"><img src="images/gabriel-still-01.jpeg" alt="Gabriel Ernest Frame 1 - Top Center" class="clickable-still"></div>
+                    <div class="gabriel-center-bottom"><img src="images/gabriel-still-06.jpeg" alt="Gabriel Ernest Frame 6 - Bottom Center" class="clickable-still"></div>
+                    <div class="gabriel-c3"><img src="images/gabriel-still-04.jpeg" alt="Gabriel Ernest Frame 4" class="clickable-still"></div>
+                    <div class="gabriel-c4"><img src="images/gabriel-still-05.jpeg" alt="Gabriel Ernest Frame 5" class="clickable-still"></div>
+                </div>
+            </div>
+            <div class="card-details">
+                <div class="card-title">Gabriel Ernest</div>
+                <div class="card-meta">Short Film (16mm) | <span class="badge gaffer">Gaffer</span></div>
+            </div>
+        </div>
+
+        <!-- Slot 3: When I Was Older -->
         <div class="gallery-card">
             <div class="image-box-wrapper">
                 <div class="grid-placeholder">
@@ -673,38 +724,8 @@
                 <div class="card-meta">Short Film | <span class="badge gaffer">Gaffer</span></div>
             </div>
         </div>
-        <div class="gallery-card">
-            <div class="image-box-wrapper">
-                <div class="grid-lilicuria-3">
-                    <div><img src="images/Lilicuria-still-1.JPG" alt="Lili Curia Slice 1" class="clickable-still" style="width: 100%; height: 100%; object-fit: cover; object-position: center;"></div>
-                    <div><img src="images/Lilicuria-still-2.JPG" alt="Lili Curia Slice 2" class="clickable-still" style="width: 100%; height: 100%; object-fit: cover; object-position: center;"></div>
-                    <div><img src="images/Lilicuria-still-3.JPG" alt="Lili Curia Slice 3" class="clickable-still" style="width: 100%; height: 100%; object-fit: cover; object-position: center;"></div>
-                </div>
-            </div>
-            <div class="card-details">
-                <div class="card-title">Lili Curia</div>
-                <div class="card-meta">Fashion Campaign | <span class="badge gaffer">Gaffer</span></div>
-            </div>
-        </div>
-        <div class="gallery-card">
-            <div class="image-box-wrapper">
-                <div class="grid-placeholder"><div>Shot 1</div><div>Shot 2</div><div>Shot 3</div><div>Shot 4</div></div>
-            </div>
-            <div class="card-details">
-                <div class="card-title">DM</div>
-                <div class="card-meta">Short Film | <span class="badge gaffer">Gaffer</span></div>
-            </div>
-        </div>
-        <div class="gallery-card">
-            <div class="image-box-wrapper">
-                <div class="grid-placeholder"><div>Shot 1</div><div>Shot 2</div><div>Shot 3</div><div>Shot 4</div></div>
-            </div>
-            <div class="card-details">
-                <div class="card-title">Gabriel Ernest</div>
-                <div class="card-meta">Short Film (16mm) | <span class="badge gaffer">Gaffer</span></div>
-            </div>
-        </div>
         
+        <!-- Slot 4: Tucker Is Gone -->
         <div class="gallery-card">
             <div class="image-box-wrapper">
                 <div class="grid-tucker-5">
@@ -720,24 +741,8 @@
                 <div class="card-meta">Short Film | <span class="badge gaffer">Gaffer</span></div>
             </div>
         </div>
-        
-        <div class="gallery-card">
-            <div class="image-box-wrapper">
-                <div class="grid-nosedive-6">
-                    <div><img src="images/nosedive-still-01.jpg" alt="Nosedive Frame 1" class="clickable-still"></div>
-                    <div><img src="images/nosedive-still-03.jpg" alt="Nosedive Frame 3" class="clickable-still"></div>
-                    <div><img src="images/nosedive-still-02.jpg" alt="Nosedive Frame 2" class="clickable-still"></div>
-                    <div><img src="images/nosedive-still-05.jpg" alt="Nosedive Frame 5" class="clickable-still"></div>
-                    <div><img src="images/nosedive-still-04.jpg" alt="Nosedive Frame 4" class="clickable-still"></div>
-                    <div><img src="images/nosedive-still-06.jpg" alt="Nosedive Frame 6" class="clickable-still"></div>
-                </div>
-            </div>
-            <div class="card-details">
-                <div class="card-title">Nosedive (Man/Woman/Chainsaw)</div>
-                <div class="card-meta">Music Video | <span class="badge">Spark</span></div>
-            </div>
-        </div>
-        
+
+        <!-- Slot 5: McLaren Special Operations -->
         <div class="gallery-card">
             <div class="image-box-wrapper">
                 <div class="grid-mso-6">
@@ -755,42 +760,47 @@
             </div>
         </div>
         
+        <!-- Slot 6: Nosedive Man/Woman/Chainsaw -->
         <div class="gallery-card">
             <div class="image-box-wrapper">
-                <div class="grid-placeholder"><div>Shot 1</div><div>Shot 2</div><div>Shot 3</div><div>Shot 4</div></div>
+                <div class="grid-nosedive-6">
+                    <div><img src="images/nosedive-still-01.jpg" alt="Nosedive Frame 1" class="clickable-still"></div>
+                    <div><img src="images/nosedive-still-03.jpg" alt="Nosedive Frame 3" class="clickable-still"></div>
+                    <div><img src="images/nosedive-still-02.jpg" alt="Nosedive Frame 2" class="clickable-still"></div>
+                    <div><img src="images/nosedive-still-05.jpg" alt="Nosedive Frame 5" class="clickable-still"></div>
+                    <div><img src="images/nosedive-still-04.jpg" alt="Nosedive Frame 4" class="clickable-still"></div>
+                    <div><img src="images/nosedive-still-06.jpg" alt="Nosedive Frame 6" class="clickable-still"></div>
+                </div>
             </div>
             <div class="card-details">
-                <div class="card-title">This Is How It Goes</div>
-                <div class="card-meta">Major Motion Picture | <span class="badge mmp-tag">Lighting Trainee</span></div>
+                <div class="card-title">Nosedive (Man/Woman/Chainsaw)</div>
+                <div class="card-meta">Music Video | <span class="badge">Spark</span></div>
             </div>
         </div>
-        <div class="gallery-card">
-            <div class="image-box-wrapper">
-                <div class="grid-placeholder"><div>Shot 1</div><div>Shot 2</div><div>Shot 3</div><div>Shot 4</div></div>
-            </div>
-            <div class="card-details">
-                <div class="card-title">Spinning</div>
-                <div class="card-meta">Short Film | <span class="badge gaffer">Gaffer</span></div>
-            </div>
-        </div>
+
     </section>
 
     <h2>Behind The Scenes (BTS) on Set</h2>
     <section class="gallery-grid-4x3">
+        <!-- Row 1 -->
         <div class="gallery-card"><img src="images/bts1.jpeg" alt="BTS 1" class="clickable-bts" style="width:100%; height:160px; object-fit:cover; object-position: center 62%; display:block;"></div>
         <div class="gallery-card"><img src="images/bts2.jpg" alt="BTS 2" class="clickable-bts" style="width:100%; height:160px; object-fit:cover; object-position: center 20%; display:block;"></div>
         <div class="gallery-card"><img src="images/bts3.jpg" alt="BTS 3" class="clickable-bts" style="width:100%; height:160px; object-fit:cover; display:block;"></div>
+        <!-- Row 2 -->
         <div class="gallery-card"><img src="images/bts4.jpeg" alt="BTS 4" class="clickable-bts" style="width:100%; height:160px; object-fit:cover; object-position: center 25%; display:block;"></div>
         <div class="gallery-card"><img src="images/bts5.jpeg" alt="BTS 5" class="clickable-bts" style="width:100%; height:160px; object-fit:cover; object-position: center 36%; display:block;"></div>
         <div class="gallery-card"><img src="images/bts6.JPG" alt="BTS 6" class="clickable-bts" style="width:100%; height:160px; object-fit:cover; display:block;"></div>
+        <!-- Row 3 -->
         <div class="gallery-card"><img src="images/bts7.jpeg" alt="BTS 7" class="clickable-bts" style="width:100%; height:160px; object-fit:cover; object-position: center 65%; display:block;"></div>
         <div class="gallery-card"><img src="images/bts8.jpeg" alt="BTS 8" class="clickable-bts" style="width:100%; height:160px; object-fit:cover; display:block;"></div>
         <div class="gallery-card"><img src="images/bts9.jpeg" alt="BTS 9" class="clickable-bts" style="width:100%; height:160px; object-fit:cover; display:block;"></div>
+        <!-- Row 4 -->
         <div class="gallery-card"><img src="images/bts10.JPG" alt="BTS 10" class="clickable-bts" style="width:100%; height:160px; object-fit:cover; object-position: center 40%; display:block;"></div>
         <div class="gallery-card"><img src="images/bts11.JPG" alt="BTS 11" class="clickable-bts" style="width:100%; height:160px; object-fit:cover; display:block;"></div>
-        <div class="gallery-card"><img src="images/bts12.jpg" alt="BTS 12" class="clickable-bts" style="width:100%; height:160px; object-fit:cover; display:block;"></div>
+        <div class="gallery-card"><img src="images/bts12.JPG" alt="BTS 12" class="clickable-bts" style="width:100%; height:160px; object-fit:cover; display:block;"></div>
     </section>
 
+    <!-- Lightbox Structural Elements -->
     <div id="customLightbox" class="lightbox-modal">
         <span class="lightbox-close">&times;</span>
         <img class="lightbox-content" id="lightboxTargetImg" alt="Full Screen Preview">
@@ -819,11 +829,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="highlight-row"><td>🎬 <strong>'MOTION' CHINCHILLA</strong></td><td>Visualiser</td><td><span class="badge gaffer">Gaffer</span></td><td>June 2026</td></tr>
-                    <tr><td>💼 <strong>'SWINGERS'</strong></td><td>Social Media Advert</td><td><span class="badge">Spark</span></td><td>June 2026</td></tr>
+                    <!-- June 2026 Adjustments -->
+                    <tr class="highlight-row"><td>⚡ <strong>'KHASR'</strong></td><td>Fashion Shoot</td><td><span class="badge gaffer">Gaffer & Stills Assist</span></td><td>June 2026</td></tr>
+                    <tr><td>🚗 <strong>'GEELY X TEAM ENGLAND'</strong></td><td>Car Commercial</td><td><span class="badge">Spark</span></td><td>June 2026</td></tr>
+                    <tr class="highlight-row"><td>❤️ <strong>'HEALTH OR HYPE?' Bupa x Joe Wicks</strong></td><td>Podcast</td><td><span class="badge">Spark</span></td><td>June 2026</td></tr>
+                    <tr><td>🎬 <strong>'MOTION' CHINCHILLA</strong></td><td>Visualiser</td><td><span class="badge gaffer">Gaffer</span></td><td>June 2026</td></tr>
+                    <tr><td>💼 <strong>'SWINGERS'</strong></td><td>Branded Content</td><td><span class="badge">Spark</span></td><td>June 2026</td></tr>
                     <tr><td>🎵 <strong>'BLEEDING GOLD' Wasia Project</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>June 2026</td></tr>
                     <tr><td>💼 <strong>'STAGE IT'</strong></td><td>Corporate Advert</td><td><span class="badge">Spark / Camera Assistant</span></td><td>June 2026</td></tr>
                     
+                    <!-- May 2026 -->
                     <tr><td>⚽ <strong>'THE WORLD CUP'</strong></td><td>Short Film</td><td><span class="badge gaffer">Gaffer</span></td><td>May 2026</td></tr>
                     <tr><td><strong>'BODY MOVEMENTS' Saoirse</strong></td><td>Visualiser</td><td><span class="badge">Spark</span></td><td>May 2026</td></tr>
                     <tr><td><strong>'Questions' Maisie Peters</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>May 2026</td></tr>
@@ -833,6 +848,7 @@
                     <tr><td><strong>'TT SOCKS'</strong></td><td>Commercial</td><td><span class="badge gaffer">Gaffer</span></td><td>May 2026</td></tr>
                     <tr><td><strong>'SURPRISE SURPRISE' Chloe Qisha</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>May 2026</td></tr>
                     
+                    <!-- April 2026 -->
                     <tr class="highlight-row"><td>🎬 <strong>'WHEN I WAS OLDER' (WIWO)</strong></td><td>Short Film</td><td><span class="badge gaffer">Gaffer</span></td><td>April 2026</td></tr>
                     <tr><td><strong>'THE OATH'</strong></td><td>Short Film</td><td><span class="badge">Spark</span></td><td>April 2026</td></tr>
                     <tr><td><strong>'SHADOW DIVA'</strong></td><td>Vertical Drama</td><td><span class="badge">Spark</span></td><td>April 2026</td></tr>
@@ -841,12 +857,14 @@
                     <tr><td><strong>'COUREZ'</strong></td><td>Fashion Campaign</td><td><span class="badge">Spark</span></td><td>April 2026</td></tr>
                     <tr><td><strong>'ALL STARS X BIEN VU'</strong></td><td>Football Campaign</td><td><span class="badge">Spark</span></td><td>April 2026</td></tr>
                     
+                    <!-- March 2026 -->
                     <tr><td><strong>'VC'</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>March 2026</td></tr>
                     <tr><td><strong>'TAKE YOU THERE' Mae Muller</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>March 2026</td></tr>
                     <tr><td><strong>'BLACKOUT'</strong></td><td>Indie Feature</td><td><span class="badge">Spark</span></td><td>March 2026</td></tr>
-                    <tr><td><strong>'SHADOW of AN ARISTOCRAT'</strong></td><td>Vertical Drama</td><td><span class="badge">Spark</span></td><td>March 2026</td></tr>
+                    <tr><td><strong>'SHADOW OF AN ARISTOCRAT'</strong></td><td>Vertical Drama</td><td><span class="badge">Spark</span></td><td>March 2026</td></tr>
                     <tr class="highlight-row"><td>⚡ <strong>Lili Curia</strong></td><td>Fashion Campaign</td><td><span class="badge gaffer">Gaffer</span></td><td>March 2026</td></tr>
                     
+                    <!-- Feb 2026 -->
                     <tr class="highlight-row"><td>🚗 <strong>McLaren Special Operations</strong></td><td>Social Media Campaign</td><td><span class="badge">Spark</span></td><td>February 2026</td></tr>
                     <tr class="highlight-row"><td>🎬 <strong>'DM'</strong></td><td>Short Film</td><td><span class="badge gaffer">Gaffer</span></td><td>February 2026</td></tr>
                     <tr class="highlight-row"><td>🎵 <strong>'NOSEDIVE' Man/Woman/Chainsaw</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>February 2026</td></tr>
@@ -854,13 +872,15 @@
                     <tr><td><strong>'SORRY ANYWAY' Rosa Walton</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>February 2026</td></tr>
                     <tr><td><strong>'TIMESWIPER'</strong></td><td>Short Film</td><td><span class="badge">Spark</span></td><td>February 2026</td></tr>
                     
+                    <!-- Jan 2026 -->
                     <tr><td><strong>'Arthur &amp; Clara'</strong></td><td>Indie Feature Film</td><td><span class="badge bestboy">Best Boy</span></td><td>January 2026</td></tr>
                     <tr class="highlight-row"><td>🎬 <strong>'Spinning'</strong></td><td>Short Film</td><td><span class="badge gaffer">Gaffer</span></td><td>January 2026</td></tr>
                     <tr><td><strong>'THE FATAL FLAW' Paris Paloma</strong></td><td>Album Cover Shoot</td><td><span class="badge">Lighting Assist / Spark</span></td><td>January 2026</td></tr>
                     <tr><td><strong>'PULL UP' BKLAVA</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>January 2026</td></tr>
-                    <tr class="highlight-row"><td>🎥 <strong>'Gabriel Ernest'</strong></td><td>Short Film (16mm)</td><td><span class="badge gaffer">Gaffer</span></td><td>January 2026</td></tr>
+                    <tr class="highlight-row"><td>🎥 <strong>'Gabriel Ernest'</strong></td><td>16mm Short Film</td><td><span class="badge gaffer">Gaffer</span></td><td>January 2026</td></tr>
                     <tr class="highlight-row"><td>🎬 <strong>'Tucker Is Gone'</strong></td><td>Short Film</td><td><span class="badge gaffer">Gaffer</span></td><td>January 2026</td></tr>
                     
+                    <!-- Late 2025 Backlog -->
                     <tr><td><strong>Petroleum &amp; Co Ferrari</strong></td><td>Commercial</td><td><span class="badge">Spark</span></td><td>December 2025</td></tr>
                     <tr><td><strong>'ALICE' Erin LeCount</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>December 2025</td></tr>
                     <tr><td><strong>'DON'T YOU SEE ME TRYING?' Erin LeCount</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>December 2025</td></tr>
@@ -879,6 +899,7 @@
                     <tr><td><strong>'Every Yellow Car'</strong></td><td>Short Film</td><td><span class="badge">Spark</span></td><td>February 2025</td></tr>
                     <tr><td><strong>'Portfolio Shoot' Luke Teusch</strong></td><td>Cinematography Portfolio</td><td><span class="badge">Spark</span></td><td>February 2025</td></tr>
                     
+                    <!-- Pre-2025 Credit Log -->
                     <tr><td><strong>'HARK!' Joviale</strong></td><td>Music Video</td><td><span class="badge">Spark</span></td><td>October 2024</td></tr>
                     <tr><td><strong>Jamie Hance Self Tape</strong></td><td>Actor/Musician Clip</td><td><span class="badge gaffer">Gaffer</span></td><td>August 2024</td></tr>
                     <tr><td><strong>'Spectral Daze'</strong></td><td>Movement Art Piece</td><td><span class="badge">Spark</span></td><td>June 2024</td></tr>
@@ -888,11 +909,14 @@
                     <tr><td><strong>Wolt</strong></td><td>Commercial</td><td><span class="badge">Spark</span></td><td>July 2023</td></tr>
                     <tr><td><strong>Insights</strong></td><td>Podcast</td><td><span class="badge">Spark</span></td><td>July 2023</td></tr>
                     <tr><td><strong>Killer in the House</strong></td><td>Short Film</td><td><span class="badge">2nd AC / Spark</span></td><td>July 2023</td></tr>
-                    <tr><td><strong>Joe Wicks x Bupa</strong></td><td>Podcast</td><td><span class="badge">Spark</span></td><td>July 2023</td></tr>
                     <tr><td><strong>'HOTEL ON THE CLIFF' Velvet Grip</strong></td><td>Live Music Video</td><td><span class="badge gaffer">Director of Photography</span></td><td>June 2023</td></tr>
                     <tr><td><strong>'LET ME BREATHE' Velvet Grip</strong></td><td>Live Music Video</td><td><span class="badge gaffer">Director of Photography</span></td><td>June 2023</td></tr>
                     <tr><td><strong>BugBoy</strong></td><td>Short Film</td><td><span class="badge">2nd AC / Grip / Spark</span></td><td>October 2022</td></tr>
+                    <tr><td><strong>'YEMZ' Live DJ Set</strong></td><td>Social Promo</td><td><span class="badge">Videographer</span></td><td>June 2022</td></tr>
+                    <tr><td><strong>'WD' JAMIE HANCE</strong></td><td>Music Video</td><td><span class="badge gaffer">Gaffer</span></td><td>January 2022</td></tr>
                     <tr><td><strong>Strike: Lethal White</strong></td><td>TV Series</td><td><span class="badge">Camera Trainee</span></td><td>November 2019</td></tr>
+                    <tr><td><strong>'63 Pretoria Street'</strong></td><td>Short Film</td><td><span class="badge">Videographer</span></td><td>August 2018</td></tr>
+                    <tr><td><strong>'Miss England' Chiara King</strong></td><td>Beauty Pageant Clip</td><td><span class="badge">Videographer</span></td><td>July 2018</td></tr>
                     <tr><td><strong>Forgiving Earth</strong></td><td>Netflix Production</td><td><span class="badge">Camera Trainee</span></td><td>July 2017</td></tr>
                 </tbody>
             </table>
@@ -1025,7 +1049,6 @@
 </div>
 
 <script>
-    // Universal Core Accordion Engine
     function toggleAccordion(panelId, btnElement) {
         var panel = document.getElementById(panelId);
         
@@ -1039,7 +1062,6 @@
         }
     }
 
-    // Lightbox Logic Integration for Stills & BTS
     var modal = document.getElementById("customLightbox");
     var modalImg = document.getElementById("lightboxTargetImg");
     var closeSpan = document.getElementsByClassName("lightbox-close")[0];
